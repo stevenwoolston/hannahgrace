@@ -1,0 +1,175 @@
+/*
+@package: wwd blankslate
+*/
+@import "_variables";
+@import "vendor/_bootstrap";
+@import "vendor/_animate";
+@import "_mixins";
+@import "_woocommerce";
+@import "_layout";
+@import "_core";
+@import "_carousel";
+@import "_header";
+@import "_sidebar";
+@import "_page";
+@import "_footer";
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('../css/fonts/American Typewriter Regular.otf') format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('../css/fonts/American Typewriter Bold.otf') format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $body-font;
+    color: $base-font-color;
+    font-size: $base-font-size;
+}
+
+hr {
+    border-color: rgba(245, 245, 245, 0.4);
+}
+
+.md-btn {
+    @extend .btn;
+    @include md-btn();
+}
+
+main#main {
+    margin-top: $header-height;
+
+    > .wwd-content-page > .gutter {
+        margin-top: 25vh;
+    }
+
+    > .wwd-content-page.cart > .gutter, 
+    > .wwd-content-page.checkout > .gutter {
+        margin-top: 10vh;
+    }    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    color: cv(blue);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
+p {
+    line-height: 1.8em;
+    margin-bottom: 1em;
+    color: cv(blue);
+
+    &:empty {
+        display: none;
+    }
+}
+
+.call-to-action {
+    
+    a {
+        @include md-btn();
+    }
+}
+
+#mc_embed_signup {
+    margin: 0 auto;
+    padding-top: 2em;
+
+    h2 {
+        margin-top: 0 !important;
+        font-family: "American Typewriter",sans-serif !important;
+        font-size: 24px !important;
+        font-weight: 400 !important;
+        margin: 0;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        width: 100%;
+    }
+
+    form.validate {
+        padding: 0 !important;
+
+        @include media-breakpoint-down(xs) {
+            padding: 40px 0 0 0 !important;
+        }
+    }
+
+    input[type=text], input[type=password], input[type=email], select {
+        color: cv(defaultdark) !important;
+    }
+
+    input[type=submit]#mc-embedded-subscribe {
+        @extend .btn;
+        @include md-btn();
+        font-family: $body-font;
+        font-size: 1.1em !important;
+        line-height: 0.4em;
+        padding: 20px 50px 25px 50px !important;
+    }
+
+    .mc-field-group {
+        padding-bottom: 10px !important;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.page-footer #mc_embed_signup {
+    background-color: cv(blue) !important;
+    width: 80%;
+    padding-top: 0;
+    
+    input[type=submit]#mc-embedded-subscribe {
+        background-color: cv(purple) !important;
+        color: cv(defaultlight) !important;
+    }
+
+    .mc-field-group {
+        padding-bottom: 3% !important;
+    }
+
+}

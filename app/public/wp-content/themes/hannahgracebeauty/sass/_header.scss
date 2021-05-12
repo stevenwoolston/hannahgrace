@@ -1,0 +1,480 @@
+header.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    z-index: 99;
+
+    /*  icons   */
+    .social-icon i {
+        font-size: 2em;
+        color: cv(mauve);
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: cv(mauve, dark);
+        }
+    }
+
+    .nav-search-icon {
+        padding-right: 20px;
+                        
+        i {
+            font-size: 1.5em;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        justify-content: flex-start;
+        background-color: cv(purple);
+    }
+}
+
+$logo-width: 210px;
+.custom-logo {
+    padding: 2px 0 0 0 !important;
+    position: relative;
+
+    img, a {
+        width: $logo-width;
+
+        @include media-breakpoint-down(md) {
+            width: 150px;
+        }    
+
+    }
+
+    img {
+        height: auto;
+        margin-left: 20px;
+    }
+
+    a {
+        display: block;
+    }
+}
+
+.page-home .custom-logo img {
+    position: absolute;
+    top: 20vh;
+    width: $logo-width * 2;
+    height: auto;
+    transition: all 1s ease-in-out;
+    margin-left: calc(5vw - 10px);
+    z-index: 20;
+
+    @include media-breakpoint-down(lg) {
+        top: 15vh;
+        width: 250px;
+        margin-left: calc(5vw - 5px);
+    }
+
+    @include media-breakpoint-down(md) {
+        position: relative;
+        top: unset;
+        width: 160px;
+        height: unset;
+    }
+}
+
+.page-home .docked .custom-logo img {
+    top: -37px;
+    width: 210px;
+    margin-left: 20px;
+    height: auto;
+
+    @include media-breakpoint-down(md) {
+        top: unset;
+        width: 160px;
+    }
+}
+
+.top-notification-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cv(cyan);
+    color: #fff;
+    padding: 5px 10px 5px;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    height: 30px;
+
+    .banner {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .cart {
+        display: flex;
+        align-items: center;
+        order: 1;
+        padding: 0 20px 0 0;
+
+        .basket, .my-account {
+            display: flex;
+            align-items: center;
+            text-align: right;
+            padding: 0 5px 0 0;
+            
+            a {
+                padding: 0 5px 0 0;
+                color: #fff;
+
+                &:focus, &:active, &:visited, &:hover {
+                    color: #fff;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .la-shopping-basket, .la-user {
+                color: #fff;
+                font-size: 2em;
+            }
+        }
+
+        .basket {
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
+}
+
+#menu-primary {
+    display: flex;
+    list-style: none;
+    padding: 0 20px 0 0;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    transition: box-shadow 1s ease-in-out;
+    height: 80px;
+
+    &.docked {
+        box-shadow: -1px 1px 10px 0px #eee;
+    }
+
+    > li {
+        padding: 10px;
+
+        a {
+            color: cv(blue);
+            font-family: $nav-font;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 0.9em;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &.nav-shop-link {
+            text-align: right;
+        }
+
+        &.nav-basket {
+            display: none;
+        }
+
+        &.social-navs {
+            ul {
+                display: flex;
+                padding: 0;
+
+                li {
+                    order: 0;
+
+                    &.facebook_site {
+                        order: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+
+        .toggle {
+            display: flex;
+            order: 0;
+
+            label i {
+                color: cv(cyan);
+            }
+        }
+
+        .custom-logo {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        .nav-basket {
+            display: flex !important;
+            align-items: center;
+            
+            a {
+                color: cv(cyan);
+                font-size: 1.2em;
+
+                i {
+                    font-size: 1.7em;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+
+        .nav-basket {
+            
+            a {
+                font-size: 1.2em;
+
+                i {
+                    font-size: 1.8em;
+                }
+            }
+        }
+    }
+}
+
+.nav-menu-items {
+    flex-grow: 1;
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: flex-end;
+
+        li {
+            padding: 10px;
+
+            &.nav-search-icon {
+                display: none;
+                cursor: pointer;
+                
+                i {
+                    color: cv(green);
+                }
+            }
+        }
+
+    }
+}
+
+.nav-menu-items li.selected a
+{
+    text-decoration: underline !important;
+    font-weight: 500;
+}
+
+.toggle, #menu_is_active {
+    display: none;
+}
+
+.toggle {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+        display: block;
+    }    
+
+    .toggle-link {
+        display: block;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .toggle-link .las {
+        font-size: 3em;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 2em;
+        }    
+    }
+}
+
+ul.social-links {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+@include media-breakpoint-down(md) {
+    #menu-primary {
+        flex-wrap: wrap;
+
+        > * {
+            padding: 2vh 10px !important;
+        }
+    }
+    
+    li.toggle {
+        order: 1;
+
+        label {
+
+            i {
+
+                &.las.la-times {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    li.custom-logo {
+        order: 2;
+        flex-grow: 1;
+    }
+
+    li.nav-basket {
+        order: 3;
+    }
+
+    li.social-navs {
+        order: 5;
+        display: none;
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+
+                a {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+
+                    i {
+                        color: #fff !important;
+                        font-size: 3em !important;
+                    }
+                }
+            }
+        }
+    }
+
+    li.nav-shop-link {
+        order: 4;
+        display: none;
+        width: 100%;
+        text-align: center !important;
+
+        a {
+            border-radius: 0 !important;
+            padding: 8px 50px !important;
+            background-color: #fff;
+            border-color: #fff;
+            color: #fff !important;
+            border-color: #fff !important;
+            font-size: 14px !important;
+        }
+    }
+
+    li.nav-menu-items {
+        order: 4;
+        display: none;
+        width: 100%;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                padding: 10px 0;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    color: #fff !important;
+                    font-size: 2em !important;
+                }
+            }
+        }
+    }
+
+    #menu_is_active:checked {
+
+        & ~ #menu-primary {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            background-color: cv(purple, dark);
+        }
+
+        & ~ ul#menu-primary li.nav-menu-items,
+        & ~ ul#menu-primary li.social-navs,
+        & ~ ul#menu-primary li.nav-shop-link {
+            display: block;
+        }
+
+        & ~ ul#menu-primary li.toggle label .las.la-times {
+            display: block;
+            color: #fff !important;
+        }
+    
+        & ~ ul#menu-primary li.toggle label .las.la-bars {
+            display: none;
+            color: #fff !important;
+        }
+
+        & ~ ul#menu-primary li.nav-basket {
+            order: 3;
+    
+            a {
+                color: #fff !important;
+            }
+        }
+    }
+
+    .toggle {
+        display: block;
+    }
+}
+
+#popover-search-form {
+    font-family: $body-font;
+    
+    .products-only-container {
+        display: flex;
+        align-items: center;
+
+        label[for=products-only] {
+            font-family: $body-font;
+            display: block;
+            padding: 5px 0 10px 0;
+    
+            input#products-only {
+                margin-right: 10px;
+                zoom: 1.2;
+            }
+        }    
+    }
+
+    input[type=text], button#search-button {
+        font-family: $body-font;
+        border-radius: 0 !important;
+    }
+}

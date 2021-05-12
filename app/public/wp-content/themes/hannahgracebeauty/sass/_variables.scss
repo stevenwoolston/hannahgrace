@@ -1,0 +1,27 @@
+/*
+@package: wwd blankslate
+*/
+$colors: (
+    pink: #ff80aa,
+    orange: #ffa26d,
+    yellow: #ffe548,
+    green: #10e18f,
+    purple: #db86ef,
+    mauve: #c0b9ff,
+    blue: #4C79D2,
+    cyan: #31c9d5,
+    deepgreen: #1C415E,
+    defaultlight: #eeeeee,
+    defaultdark: #333
+);
+
+$body-font: 'Roboto', sans-serif;
+$heading-font: 'American Typewriter', sans-serif;
+$base-font-size: 16px;
+$base-font-color: #4C79D2;
+$header-height: 110px;
+$nav-font: $body-font;
+$hero-height: 60vh;
+$carousel-height: 60vh;
+$base-link-color: #4C79D2;
+$base-link-alt-color: #333;

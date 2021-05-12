@@ -1,0 +1,47 @@
+/*
+    Gallery Format
+    Supported by 'custom-carousel' media size
+*/
+.wwd-content-gallery, .carousel, .carousel-inner .carousel-item {
+    height: $carousel-height;
+}
+
+.carousel-inner .item img {
+    
+}
+
+.wwd-content-gallery {
+
+    .carousel {
+
+    }
+}
+
+.wwd-carousel.w-100 {
+    height: $carousel-height;
+    position: relative;
+    z-index: -1;
+}
+
+.carousel-item .img-fluid {
+    width: 100% !important;
+    height: auto;
+    margin: 0 0 0 auto;
+}
+
+.carousel-item a {
+    display: block;
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 40%;
+    left: 4vw;
+    width: 40%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: cv(blue);
+    text-align: left;
+}

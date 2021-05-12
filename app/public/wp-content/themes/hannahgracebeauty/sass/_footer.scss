@@ -1,0 +1,175 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: cv(blue);
+    border-top: 5px dashed cv(purple, light);
+    font-size: 0.9em;
+    position: relative;
+    margin-top: 75px;
+    
+    .md-floating-scissors {
+        width: 70px;
+        height: auto;
+        position: absolute;
+        top: -40px;
+        left: 20px;
+        transition: left 4s ease-in;
+
+        &.is-visible {
+            left: 90vw;
+
+            @include media-breakpoint-down(xs) { 
+                left: 75vw;
+            }
+        }
+    }
+
+
+    * {
+        color: #fff;
+    }
+
+    .footer-content {
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin: 0 auto;
+        border-bottom: 1px solid #fff;
+
+        @include media-breakpoint-down(xs) { 
+            flex-direction: column;
+            width: 100%;
+            padding: 30px 5%;
+        }
+        
+        .footer-content-item {
+            flex: 0 0 45%;
+            justify-content: space-between;
+
+            p:empty() {
+                display: none;
+            }
+
+            &:nth-child(1) {
+                padding-right: 10%;
+
+                @include media-breakpoint-down(xs) {
+                    padding-right: unset;
+                }                
+            }
+
+            h4 {
+                font-family: $heading-font;
+                font-size: 24px !important;                
+                margin: 0;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+
+            p {
+                margin-bottom: 40px;
+            }
+
+            ul.social-links {
+                
+                i {
+                    font-size: 3em;
+                    color: cv(mauve);
+                }
+            }
+            
+        }
+    }
+
+    .footer-references {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        @extend .gutter;
+
+        @include media-breakpoint-down(xs) {
+            flex-direction: column;
+        }
+
+        > div {
+            font-size: 0.8em;
+            flex: 0 0 30%;
+    
+            &:nth-child(1) {
+                text-align: left;
+            }
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+
+            &:nth-child(3) {
+                text-align: right;
+            }            
+
+            @include media-breakpoint-down(xs) {
+                flex: 0 0 100%;
+                text-align: center !important;
+                padding: 0 0 10px 0;
+            }
+        }
+    }
+
+    .wpforms-container.wpforms-container-full {
+
+        .wpforms-validate.wpforms-form {
+            display: flex;
+            align-items: flex-end;
+            
+            .wpforms-field-container {
+                flex-grow: 1;
+
+                .wpforms-field {
+                    padding: 10px 0 0 0;
+                }
+
+                input {
+                    width: 100%;
+                    max-width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    font-size: 0.9em;
+                    color: #fff;
+
+                    &::placeholder {
+                        color: #fff !important;
+                    }
+
+                    &.wpforms-error {
+
+                        &::placeholder {
+                            color: #ff0000 !important;
+                        }
+    
+                    }
+                }
+
+                label.wpforms-error {
+                    display: none !important;
+                }
+            }
+
+            .wpforms-submit-container {
+                flex: 0 0 100px;
+
+                button[type=submit] {
+                    background-color: transparent;
+                    color: #fff;
+                    font-size: 0.9em;
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+    }
+}
