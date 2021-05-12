@@ -82,29 +82,29 @@ function wwd_custom_post_types() {
     if (function_exists('wwd_generic_taxonomy')) {
         //  these items have the incorrect id format. Should use underscores
         wwd_generic_taxonomy('builder-component', 'Component Locations', 'builder-component', array('layout'));
-        wwd_generic_taxonomy('news-topic', 'Topics', 'news-topic', array('news'));
+        // wwd_generic_taxonomy('news-topic', 'Topics', 'news-topic', array('news'));
 
         // wwd_generic_taxonomy('maker-audience', 'Makers Audience', 'maker-audience', array('maker'));
         // wwd_generic_taxonomy('maker-product', 'Makers Products', 'maker-product', array('maker'));
-        wwd_generic_taxonomy('maker_audience', 'Makers\' Audiences', 'maker-audience', array('maker'));
-        wwd_generic_taxonomy(
-            $name = 'maker_product', 
-            $label = 'Makers\' Products',
-            $slug = 'maker-product', 
-            $custom_post_type = array('maker'));
+        // wwd_generic_taxonomy('maker_audience', 'Makers\' Audiences', 'maker-audience', array('maker'));
+        // wwd_generic_taxonomy(
+        //     $name = 'maker_product', 
+        //     $label = 'Makers\' Products',
+        //     $slug = 'maker-product', 
+        //     $custom_post_type = array('maker'));
     }
 
     if (function_exists('wwd_add_custom_post')) {
-        wwd_add_custom_post('faq', 'FAQ', 'FAQs', 'dashicons-book-alt', array('post'));
+        // wwd_add_custom_post('faq', 'FAQ', 'FAQs', 'dashicons-book-alt', array('post'));
         wwd_add_custom_post('layout', 'Layout Builder', 'Layout Builders', 'dashicons-book-alt', array('post'));
-        wwd_add_custom_post('news', 'News', 'News', 'dashicons-book-alt', array('post'));
-        wwd_add_custom_post('fabric', 'Our Fabric', 'Our Fabrics', 'dashicons-book-alt', array('post'));
-        wwd_add_custom_post(
-            $name = 'maker', 
-            $label = 'Makers\' Directory', 
-            $pluralisedName = 'Makers', 
-            $icon = 'dashicons-book-alt', 
-            $taxonomy = array('post'));
+        // wwd_add_custom_post('news', 'News', 'News', 'dashicons-book-alt', array('post'));
+        // wwd_add_custom_post('fabric', 'Our Fabric', 'Our Fabrics', 'dashicons-book-alt', array('post'));
+        // wwd_add_custom_post(
+        //     $name = 'maker', 
+        //     $label = 'Makers\' Directory', 
+        //     $pluralisedName = 'Makers', 
+        //     $icon = 'dashicons-book-alt', 
+        //     $taxonomy = array('post'));
     }
 }
 add_action('init', 'wwd_custom_post_types');
