@@ -9,11 +9,11 @@ header.page-header {
     /*  icons   */
     .social-icon i {
         font-size: 2em;
-        color: cv(mauve);
+        color: cv(illuminating-emerald);
         transition: color 0.3s ease-in-out;
 
         &:hover {
-            color: cv(mauve, dark);
+            color: cv(illuminating-emerald, dark);
         }
     }
 
@@ -27,7 +27,7 @@ header.page-header {
 
     @include media-breakpoint-down(md) {
         justify-content: flex-start;
-        background-color: cv(purple);
+        background-color: cv(illuminating-emerald);
     }
 }
 
@@ -94,7 +94,7 @@ $logo-width: 210px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: cv(cyan);
+    background-color: cv(illuminating-emerald);
     color: #fff;
     padding: 5px 10px 5px;
     font-size: 0.7em;
@@ -164,7 +164,7 @@ $logo-width: 210px;
         padding: 10px;
 
         a {
-            color: cv(blue);
+            color: cv(illuminating-emerald);
             font-family: $nav-font;
             text-transform: uppercase;
             text-decoration: none;
@@ -209,7 +209,7 @@ $logo-width: 210px;
             order: 0;
 
             label i {
-                color: cv(cyan);
+                color: cv(illuminating-emerald);
             }
         }
 
@@ -228,7 +228,7 @@ $logo-width: 210px;
             align-items: center;
             
             a {
-                color: cv(cyan);
+                color: cv(illuminating-emerald);
                 font-size: 1.2em;
 
                 i {
@@ -270,7 +270,7 @@ $logo-width: 210px;
                 cursor: pointer;
                 
                 i {
-                    color: cv(green);
+                    color: cv(illuminating-emerald);
                 }
             }
         }
@@ -421,7 +421,7 @@ ul.social-links {
             width: 100vw;
             height: 100vh;
             z-index: 1;
-            background-color: cv(purple, dark);
+            background-color: cv(illuminating-emerald, dark);
         }
 
         & ~ ul#menu-primary li.nav-menu-items,

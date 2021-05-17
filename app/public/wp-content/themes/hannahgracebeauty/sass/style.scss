@@ -64,7 +64,7 @@ main#main {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font;
-    color: cv(blue);
+    color: cv(illuminating-emerald);
     font-weight: 400;
     margin-bottom: 1rem;
 }
@@ -96,7 +96,7 @@ h6 {
 p {
     line-height: 1.8em;
     margin-bottom: 1em;
-    color: cv(blue);
+    color: cv(illuminating-emerald);
 
     &:empty {
         display: none;
@@ -137,7 +137,7 @@ p {
     }
 
     input[type=text], input[type=password], input[type=email], select {
-        color: cv(defaultdark) !important;
+        color: cv(illuminating-emerald) !important;
     }
 
     input[type=submit]#mc-embedded-subscribe {
@@ -159,13 +159,13 @@ p {
 }
 
 .page-footer #mc_embed_signup {
-    background-color: cv(blue) !important;
+    background-color: cv(illuminating-emerald) !important;
     width: 80%;
     padding-top: 0;
     
     input[type=submit]#mc-embedded-subscribe {
-        background-color: cv(purple) !important;
-        color: cv(defaultlight) !important;
+        background-color: cv(illuminating-emerald) !important;
+        color: cv(illuminating-emerald) !important;
     }
 
     .mc-field-group {

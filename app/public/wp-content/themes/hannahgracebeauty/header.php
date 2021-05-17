@@ -18,7 +18,7 @@
 <header class="page-header">
     <div class="top-notification-bar">
         <div class="banner">
-            $15 FLAT RATE SHIPPING AUSTRALIA WIDE!
+            
         </div>
         <div class="cart <?php echo WC()->cart->get_cart_contents_count() ? 'has-cart-items' : ''; ?>">
 <?php

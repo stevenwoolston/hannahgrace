@@ -73,7 +73,7 @@ ul li.woocommerce-cart-icon {
         .wp-block-media-text__content {
             align-self: stretch;
             display: flex;
-            background-color: cv(mauve, light);
+            background-color: cv(illuminating-emerald, light);
             padding: 0;
 
             .wp-block-group {
@@ -91,7 +91,7 @@ ul li.woocommerce-cart-icon {
                         background-color: #fff;
 
                         h1 {
-                            color: cv(green);
+                            color: cv(illuminating-emerald);
                             font-weight: 400;
                         }
                     }
@@ -101,7 +101,7 @@ ul li.woocommerce-cart-icon {
 
                         .wp-block-group__inner-container {
                             padding: 5vh 0 3vh 5vw;
-                            color: cv(blue);
+                            color: cv(illuminating-emerald);
 
                             p {
                                 line-height: 2em;
@@ -123,7 +123,7 @@ ul li.woocommerce-cart-icon {
         padding: 40px 8vw 20px 8vw;
 
         &:nth-child(even) {
-            background: cv(mauve, light);
+            background: cv(illuminating-emerald, light);
         }
 
         &:last-child() {
@@ -135,7 +135,7 @@ ul li.woocommerce-cart-icon {
 
             h4 {
                 a {
-                    color: cv(blue);
+                    color: cv(illuminating-emerald);
                     font-weight: 400;
                     text-decoration: underline;
                     
@@ -154,7 +154,7 @@ ul li.woocommerce-cart-icon {
                 }
 
                 .category-description {
-                    color: cv(blue);
+                    color: cv(illuminating-emerald);
                     padding: 0 8vw 0 0;
                     flex: 0 0 50%;
                 }
@@ -191,14 +191,14 @@ ul li.woocommerce-cart-icon {
                                 }
         
                                 .product-name, .product-price {
-                                    color: cv(blue);
+                                    color: cv(illuminating-emerald);
                                 }
                 
                                 .product-name {
                                     font-weight: 500;
     
                                     a {
-                                        color: cv(blue);
+                                        color: cv(illuminating-emerald);
                                         text-decoration: underline;
     
                                         &:hover {
@@ -224,7 +224,7 @@ ul li.woocommerce-cart-icon {
 
                             i {
                                 color: #fff;
-                                background-color: cv(cyan) !important;
+                                background-color: cv(illuminating-emerald) !important;
                                 border-radius: 50%;
                                 font-size: 1.5em;
                             }
@@ -265,10 +265,10 @@ ul li.woocommerce-cart-icon {
 
     .woocommerce-breadcrumb {
         padding-top: 20px;
-        color: cv(purple);
+        color: cv(illuminating-emerald);
 
         a {
-            color: cv(purple);
+            color: cv(illuminating-emerald);
         }
     }
 
@@ -342,14 +342,14 @@ ul li.woocommerce-cart-icon {
             }
 
             .product_title.entry-title {
-                color: cv(cyan);
+                color: cv(illuminating-emerald);
                 margin: 0;
                 font-weight: 400;
             }
 
             .woocommerce-product-details__short-description {
                 padding: 10px 0 15px 0;
-                color: cv(blue);
+                color: cv(illuminating-emerald);
                 font-size: 0.9em;
             }
 
@@ -367,7 +367,7 @@ ul li.woocommerce-cart-icon {
                     label {
                         flex: 0 0 30%;
                         font-weight: 400;
-                        color: cv(blue);
+                        color: cv(illuminating-emerald);
                     }
 
                     select {
@@ -376,13 +376,13 @@ ul li.woocommerce-cart-icon {
                         max-width: unset;
                         min-width: auto;
                         display: block;
-                        color: cv(blue);
+                        color: cv(illuminating-emerald);
                         border-radius: 0;
                     }
 
                     a.reset_variations {
                         padding-left: 10px;
-                        color: cv(blue);
+                        color: cv(illuminating-emerald);
                         display: block;
                     }
                 }
@@ -399,7 +399,7 @@ ul li.woocommerce-cart-icon {
 
                         .woocommerce-Price-amount.amount {
                             font-size: 2em;
-                            color: cv(blue);
+                            color: cv(illuminating-emerald);
                         }
                     }
                 }
@@ -446,7 +446,7 @@ ul li.woocommerce-cart-icon {
 
                         i {
                             font-size: 2em;
-                            color: cv(purple);
+                            color: cv(illuminating-emerald);
                             padding: 0 10px;
 
                             @include media-breakpoint-down(lg) {
@@ -455,7 +455,7 @@ ul li.woocommerce-cart-icon {
                         }
 
                         span {
-                            color: cv(purple);
+                            color: 3(illuminating-emerald);
                             font-size: 0.9em;
                         }
                     }
@@ -484,10 +484,10 @@ ul li.woocommerce-cart-icon {
 
                 > span {
                     padding: 5px 0;
-                    color: cv(blue);
+                    color: cv(illuminating-emerald);
 
                     a {
-                        color: cv(blue);
+                        color: cv(illuminating-emerald);
                     }
                 }
             }
@@ -496,10 +496,10 @@ ul li.woocommerce-cart-icon {
                 margin-top: 20px;
 
                 a {
-                    color: cv(blue);
+                    color: cv(illuminating-emerald);
 
                     i {
-                        color: cv(blue);
+                        color: cv(illuminating-emerald);
                         font-size: 2em;
                     }
                 }
@@ -514,7 +514,7 @@ ul li.woocommerce-cart-icon {
 
             p.price {
                 display: block;
-                color: cv(cyan);
+                color: cv(illuminating-emerald);
 
                 ins {
                     text-decoration: none;
@@ -547,11 +547,11 @@ ul li.woocommerce-cart-icon {
 }
 
 .woocommerce-message, .woocommerce-info {
-    border-top-color: cv(purple);
+    border-top-color: cv(illuminating-emerald);
     display: flex;
     align-items: center;
     justify-content: space-between;   
-    background-color: cv(mauve, light);
+    background-color: cv(illuminating-emerald, light);
 
     @include media-breakpoint-down(sm) {
         flex-direction: column;
@@ -561,7 +561,7 @@ ul li.woocommerce-cart-icon {
         top: 20px;
         left: 10px;
         font-size: 2em;
-        color: cv(purple);
+        color: cv(illuminating-emerald);
     }
 
     a {
@@ -588,7 +588,7 @@ ul li.woocommerce-cart-icon {
         thead {
 
             tr {
-                background-color: cv(blue);
+                background-color: cv(illuminating-emerald);
 
                 th {
                     color: #fff;
@@ -752,7 +752,7 @@ ul li.woocommerce-cart-icon {
 .woocommerce-checkout {
 
     #payment {
-        background-color: cv(mauve, light);
+        background-color: cv(illuminating-emerald, light);
 
         .wc_payment_methods.payment_methods {
     
@@ -763,10 +763,10 @@ ul li.woocommerce-cart-icon {
                 }
         
                 > div.payment_box {
-                    background-color: cv(mauve);
+                    background-color: cv(illuminating-emerald);
                     
                     &:before {
-                        border-bottom-color: cv(mauve);
+                        border-bottom-color: cv(illuminating-emerald);
                     }
 
                     fieldset {
@@ -830,7 +830,7 @@ ul li.woocommerce-cart-icon {
                 thead {
 
                     tr {
-                        background-color: cv(blue);
+                        background-color: cv(illuminating-emerald);
         
                         th {
                             color: #fff;
@@ -912,7 +912,7 @@ section.my-account {
                 thead {
     
                     tr {
-                        background-color: cv(blue);
+                        background-color: cv(illuminating-emerald);
         
                         th {
                             color: #fff;
@@ -993,10 +993,10 @@ section.my-account {
                     }
             
                     > div.payment_box {
-                        background-color: cv(mauve);
+                        background-color: cv(illuminating-emerald);
                         
                         &:before {
-                            border-bottom-color: cv(mauve);
+                            border-bottom-color: cv(illuminating-emerald);
                         }
     
                         fieldset {
@@ -1060,7 +1060,7 @@ section.my-account {
     @include media-breakpoint-down(md) {
         
         > .wp-block-group {
-            background-color: cv(mauve, light);
+            background-color: cv(illuminating-emerald, light);
 
             .shop-all-hero {
                 // grid-template-columns: 1fr 50%;
@@ -1072,7 +1072,7 @@ section.my-account {
                     padding-right: 2vw;
 
                     .wp-block-group.shop-all-heading {
-                        background-color: cv(mauve, light);
+                        background-color: cv(illuminating-emerald, light);
                     }
                 }
             }            
@@ -1142,7 +1142,7 @@ section.my-account {
         
         .badge.badge-success {
             display: inline-block;
-            background-color: cv(orange);
+            background-color: cv(illuminating-emerald);
         }
     }
 }

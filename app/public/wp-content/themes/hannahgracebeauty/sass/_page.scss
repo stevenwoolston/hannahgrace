@@ -42,19 +42,19 @@
         
         h2 {
             font-weight: 400;
-            color: cv(green);
+            color: cv(illuminating-emerald);
         }
     
         p {
             margin-bottom: 1.5em;
-            color: cv(blue);
+            color: cv(illuminating-emerald);
         }    
     }    
 
 }
 
 .whats-new-container {
-    background-color: cv(blue);
+    background-color: cv(illuminating-emerald);
     padding: 6vh 0 3vh 0;
     margin: 6vh 0;
 
@@ -133,8 +133,8 @@
     display: flex;
     flex-direction: column;
     margin: 4vh auto 0 auto;
-    background: cv(mauve);
-    background: linear-gradient(0deg, cv(mauve) 35%, #fff 35%);
+    background: cv(illuminating-emerald);
+    background: linear-gradient(0deg, cv(illuminating-emerald) 35%, #fff 35%);
 
     @include media-breakpoint-down(xs) {
         padding-top: 5vh;
@@ -145,13 +145,13 @@
     }
 
     h3 {
-        color: cv(purple);
+        color: cv(illuminating-emerald);
         font-weight: 400;
         margin-bottom: 0;
     }
 
     > p {
-        color: cv(blue);
+        color: cv(illuminating-emerald);
         font-weight: 400;
         font-size: 0.8em;
         margin: 10px auto 40px auto;
@@ -246,14 +246,14 @@ section.wwd-content-page {
             }
             
             .hero-title {
-                color: cv(purple);
+                color: cv(illuminating-emerald);
                 font-weight: 400;
             }
     
             .hero-text {
     
                 p {
-                    color: cv(blue, dark);
+                    color: cv(illuminating-emerald, dark);
                     line-height: 1.8em;
                     margin-bottom: 1em;
                 }
@@ -538,7 +538,7 @@ body:not(.page-template-page-fullwidth) {
         .wp-block-media-text__media {
 
             img {
-                box-shadow: 4vh 3vw 0px 5px cv(purple);
+                box-shadow: 4vh 3vw 0px 5px cv(illuminating-emerald);
             }
         }
 
@@ -546,15 +546,15 @@ body:not(.page-template-page-fullwidth) {
             padding-left: 0;
 
             h2 {
-                color: cv(orange);
+                color: cv(illuminating-emerald);
             }
 
             h3 {
-                color: cv(cyan);
+                color: cv(illuminating-emerald);
             }
 
             p {
-                color: cv(blue);
+                color: cv(illuminating-emerald);
             }
         }        
     }
@@ -572,7 +572,7 @@ body:not(.page-template-page-fullwidth) {
             padding: 5vh 3vw 5vh 0;
 
             img {
-                box-shadow: -4vh 3vw 0px 5px cv(yellow);
+                box-shadow: -4vh 3vw 0px 5px cv(illuminating-emerald);
             }
         }
 
@@ -584,15 +584,15 @@ body:not(.page-template-page-fullwidth) {
             }
 
             h2 {
-                color: cv(orange);
+                color: cv(illuminating-emerald);
             }
 
             h3 {
-                color: cv(cyan);
+                color: cv(illuminating-emerald);
             }
 
             p {
-                color: cv(blue);
+                color: cv(illuminating-emerald);
             }
         }        
     }
@@ -635,7 +635,7 @@ body:not(.page-template-page-fullwidth) {
     }
 
     .artist-collaborations-container {
-        background-color: cv(blue);
+        background-color: cv(illuminating-emerald);
         color: #fff;
         margin: -2vh 0 0 0;
 
@@ -649,11 +649,11 @@ body:not(.page-template-page-fullwidth) {
     }
 
     .charity-fabrics-container {
-        background-color: cv(mauve, light);
-        color: cv(blue);
+        background-color: cv(illuminating-emerald, light);
+        color: cv(illuminating-emerald);
 
         h3 {
-            color: cv(blue);
+            color: cv(illuminating-emerald);
         }
     }
 }
@@ -671,7 +671,7 @@ body:not(.page-template-page-fullwidth) {
             h2, h3, h4, h5 {
                 margin: 0;
                 padding: 10px 0 5px 0;
-                border-bottom: 1px solid cv(purple);
+                border-bottom: 1px solid cv(illuminating-emerald);
 
                 button {
                     padding: 0;
@@ -746,13 +746,13 @@ body:not(.page-template-page-fullwidth) {
             h2 {
 
                 button {
-                    color: cv(purple) !important;
+                    color: cv(illuminating-emerald) !important;
                 }
             }
         }
 
         &.open {
-            background-color: transparentize(cv(purple), 0.8);
+            background-color: transparentize(cv(illuminating-emerald), 0.8);
 
             .card-header {
                 border-bottom: none !important;
@@ -778,7 +778,7 @@ body:not(.page-template-page-fullwidth) {
                 p:last-child, figure table {
                     margin-bottom: 0 !important;
                     padding-bottom: 40px;
-                    border-bottom: 1px solid cv(purple);
+                    border-bottom: 1px solid cv(illuminating-emerald);
                 }
             }
         }
@@ -817,11 +817,11 @@ body:not(.page-template-page-fullwidth) {
     i {
         font-size: 2em;
         margin-right: 20px;
-        color: cv(purple, dark);
+        color: cv(illuminating-emerald, dark);
     }
 
     a {
-        color: cv(purple, dark);
+        color: cv(illuminating-emerald, dark);
     }
 }
 
@@ -907,7 +907,7 @@ body:not(.page-template-page-fullwidth) {
 div.meta {
     font-style: italic;
     font-size: 0.9em;
-    color: cv(blue);
+    color: cv(illuminating-emerald);
     padding-bottom: 20px;
 }
 
@@ -1028,11 +1028,11 @@ div.meta {
         &.wpforms-field-text {
 
             input[type=text] {
-                color: cv(blue);
-                border-bottom: 2px solid cv(blue) !important;
+                color: cv(illuminating-emerald);
+                border-bottom: 2px solid cv(illuminating-emerald) !important;
 
                 &::placeholder {
-                    color: cv(blue);
+                    color: cv(illuminating-emerald);
                     font-size: 0.9em;
                 }    
             }
@@ -1041,7 +1041,7 @@ div.meta {
         &.wpforms-field-textarea {
 
             textarea {
-                border-bottom: 2px solid cv(blue) !important;
+                border-bottom: 2px solid cv(illuminating-emerald) !important;
             }
         }
     }
@@ -1049,7 +1049,7 @@ div.meta {
     .wpforms-submit-container {
 
         button.wpforms-submit {
-            color: cv(blue);
+            color: cv(illuminating-emerald);
         }
     }
 }
@@ -1068,7 +1068,7 @@ div.meta {
 }
 
 .wpforms-confirmation-container-full.wpforms-confirmation-scroll {
-    background-color: cv(blue);
+    background-color: cv(illuminating-emerald);
     color: #fff;
 
     p {
@@ -1140,7 +1140,7 @@ body.search-no-results {
     aside#archive-search-sidebar {
         flex: 0 0 20vw;
         padding: 2vh 2vw;
-        background-color: cv(mauve, light);
+        background-color: cv(illuminating-emerald, light);
 
         @include media-breakpoint-down(sm) {
             flex: 0 0 100%;
@@ -1221,8 +1221,8 @@ body.search-no-results {
             margin: 0 auto 20px auto;
             border: 1px solid #ddd;
             background: rgb(0,0,0);
-            background: linear-gradient(170deg, #fff 40%, cv(cyan, light) 90%);
-            box-shadow: 9px 12px 10px cv(defaultlight, dark);
+            background: linear-gradient(170deg, #fff 40%, cv(illuminating-emerald, light) 90%);
+            box-shadow: 9px 12px 10px cv(illuminating-emerald, dark);
             transition: all 0.3s ease-in-out;
 
             @include media-breakpoint-down(lg) { 
@@ -1234,7 +1234,7 @@ body.search-no-results {
             }
         
             &:hover {
-                box-shadow: 9px 2px 10px cv(defaultlight);
+                box-shadow: 9px 2px 10px cv(illuminating-emerald);
             }
 
             .entry-image {
@@ -1278,11 +1278,11 @@ body.search-no-results {
                     i {
                         font-style: normal;
                         font-size: 2em;
-                        color: cv(purple);
+                        color: cv(illuminating-emerald);
                         transition: all 0.3s ease-in-out;
 
                         &:hover {
-                            color: cv(defaultlight);
+                            color: cv(illuminating-emerald);
                         }
                     }
                 }

@@ -85,9 +85,9 @@ $variations: (
 @mixin md-btn {
     border-radius: 0 !important;
     padding: 8px 50px !important;
-    @include button-variant(#fff, cv(purple, dark), $hover-background: cv(purple, light));
-    color: cv(purple, dark) !important;
-    border-color: cv(purple, dark) !important;
+    @include button-variant(#fff, cv(illuminating-emerald, dark), $hover-background: cv(illuminating-emerald, light));
+    color: cv(illuminating-emerald, dark) !important;
+    border-color: cv(illuminating-emerald, dark) !important;
     text-transform: uppercase !important;
     text-decoration: none !important;
     background-color: transparent !important;
@@ -98,14 +98,14 @@ $variations: (
 
     &:focus {
         color: #fff !important;
-        background-color: cv(purple, light) !important;
-        border-color: cv(purple, light) !important;
+        background-color: cv(illuminating-emerald, light) !important;
+        border-color: cv(illuminating-emerald, light) !important;
     }
 
     &:hover {
         color: #fff !important;
-        background-color: cv(purple, dark) !important;
-        border-color: cv(purple, dark) !important;
+        background-color: cv(illuminating-emerald, dark) !important;
+        border-color: cv(illuminating-emerald, dark) !important;
         text-decoration: none !important;
     }
 }

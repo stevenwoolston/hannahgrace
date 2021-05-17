@@ -2,26 +2,20 @@
 @package: wwd blankslate
 */
 $colors: (
-    pink: #ff80aa,
-    orange: #ffa26d,
-    yellow: #ffe548,
-    green: #10e18f,
-    purple: #db86ef,
-    mauve: #c0b9ff,
-    blue: #4C79D2,
-    cyan: #31c9d5,
-    deepgreen: #1C415E,
-    defaultlight: #eeeeee,
-    defaultdark: #333
+    cornflower-blue: #6f9cebff,
+    illuminating-emerald: #53917eff,
+    desert-sand: #dfc5b6ff,
+    davys-grey: #525051ff,
+    linen: #ece5ddff
 );
 
 $body-font: 'Roboto', sans-serif;
 $heading-font: 'American Typewriter', sans-serif;
 $base-font-size: 16px;
-$base-font-color: #4C79D2;
+$base-font-color: #525051ff;
 $header-height: 110px;
 $nav-font: $body-font;
 $hero-height: 60vh;
 $carousel-height: 60vh;
-$base-link-color: #4C79D2;
-$base-link-alt-color: #333;
+$base-link-color: #525051ff;
+$base-link-alt-color: darken(#525051ff, 0.5);
