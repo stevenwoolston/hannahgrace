@@ -120,11 +120,8 @@ ul li.woocommerce-cart-icon {
     section.product-category {
         display: flex;
         align-items: center;
-        padding: 40px 8vw 20px 8vw;
-
-        &:nth-child(even) {
-            background: cv(illuminating-emerald, light);
-        }
+        width: 40vw;
+        margin: 0 auto;
 
         &:last-child() {
             margin-bottom: 50px;
@@ -135,7 +132,6 @@ ul li.woocommerce-cart-icon {
 
             h4 {
                 a {
-                    color: cv(illuminating-emerald);
                     font-weight: 400;
                     text-decoration: underline;
                     
@@ -146,31 +142,10 @@ ul li.woocommerce-cart-icon {
             }
 
             .category-meta {
-                display: flex;
-                align-items: flex-start;
-
-                @include media-breakpoint-down(sm) {
-                    flex-direction: column;
-                }
-
-                .category-description {
-                    color: cv(illuminating-emerald);
-                    padding: 0 8vw 0 0;
-                    flex: 0 0 50%;
-                }
 
                 .category-products {
-                    display: flex;
-                    align-items: center;
-
-                    @include media-breakpoint-down(sm) {
-                        padding-top: 3vh;
-                    }
     
                     .category-product-list {
-                        flex-grow: 1;
-                        display: flex;
-                        justify-content: space-evenly;
 
                         > article {
 
@@ -185,26 +160,27 @@ ul li.woocommerce-cart-icon {
 
                             .product-meta {
                                 padding: 10px 0;
-    
+                                display: flex;
+
                                 @include media-breakpoint-down(sm) {
                                     text-align: center;
-                                }
-        
-                                .product-name, .product-price {
-                                    // color: cv(illuminating-emerald);
                                 }
                 
                                 .product-name {
                                     font-weight: 500;
-    
+                                    flex-grow: 1;
+
                                     a {
-                                        color: cv(illuminating-emerald);
                                         text-decoration: underline;
     
                                         &:hover {
                                             text-decoration: none;
                                         }
                                     }
+                                }
+
+                                .product-price {
+                                    text-align: center;
                                 }
                             }
                         }

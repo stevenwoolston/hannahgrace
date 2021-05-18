@@ -32,7 +32,7 @@ wp_reset_query();
 <?php
 $categories = get_terms('product_cat', array(
     'hide_empty' => true,
-    'exclude' => array(21, 116, 18, 177, 187)
+    // 'exclude' => array(21, 116, 18, 177, 187)
 ));
 foreach($categories as $category):
     // var_dump($category);
@@ -41,9 +41,6 @@ foreach($categories as $category):
         <article class="product-category-content">
             <h4><?php echo $category->name; ?></h4>
             <div class="category-meta">
-                <div class="category-description d-none">
-                    <?php echo $category->description; ?>
-                </div>
                 <div class="category-products">
                     <div class="category-product-list">
 <?php
@@ -59,7 +56,7 @@ $products = new WP_Query(array(
             // 'include_children' => false // or true (optional)
         )
     ),
-    'orderby' => 'rand',
+    'orderby' => 'title',
     'order' => 'ASC'
 ));
 if ($products->have_posts()):

@@ -88,7 +88,7 @@
 ?>
     </li>
     <li class="nav-shop-link call-to-action">
-        <a class="md-btn" href="/shop">Shop</a>
+        <a class="md-btn" href="/shop">Book</a>
     </li>
     <li class="toggle">
         <label for="menu_is_active" class="toggle-link">

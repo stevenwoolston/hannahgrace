@@ -48,10 +48,12 @@ body {
 
     > header {
         flex: 0 0 auto;
+        background-color: #FFFDF9;
     }
 
     main#main {
         flex: 1 1 auto;
+        background-color: #FFFDF9;
     }
 
     > footer {
@@ -70,9 +72,8 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font;
-    color: cv(illuminating-emerald);
-    font-weight: 400;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    margin-top: 1.3rem;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
