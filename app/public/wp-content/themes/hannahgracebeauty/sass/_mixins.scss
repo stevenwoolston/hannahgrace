@@ -12,6 +12,10 @@ $variations: (
     function: darken,
     parameters: 10%
   ),
+  darker: (
+    function: darken,
+    parameters: 25%
+  ),
   fade: (
     function: rgba,
     parameters: .7

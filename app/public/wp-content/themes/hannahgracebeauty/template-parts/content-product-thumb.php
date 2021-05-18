@@ -28,12 +28,11 @@ array_push($category_class, 'product-type-' .$product->get_type());
 ?>
 
 <article <?php post_class($category_class); ?>>
-    <div class="product-image"><a href="<?php echo get_the_permalink(); ?>"><?php echo $product->get_image(); ?></a></div>
+    <div class="product-image d-none"><a href="<?php echo get_the_permalink(); ?>"><?php echo $product->get_image(); ?></a></div>
     <div class="product-meta">
         <div class="product-name">
             <a href="<?php echo get_the_permalink(); ?>">
                 <?php echo $product->get_name(); ?>
-                <span class="badge badge-success ml-3">New</span>
             </a>
         </div>
         <div class="product-price">$<?php echo $product_price; ?></div>

@@ -39,9 +39,9 @@ foreach($categories as $category):
 ?>
     <section class="product-category">
         <article class="product-category-content">
-            <h4><a href="/product-category/<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></h4>
+            <h4><?php echo $category->name; ?></h4>
             <div class="category-meta">
-                <div class="category-description">
+                <div class="category-description d-none">
                     <?php echo $category->description; ?>
                 </div>
                 <div class="category-products">
@@ -50,7 +50,7 @@ foreach($categories as $category):
 $products = new WP_Query(array(
     'post_type' => 'product',
     'post_status' => 'publish',
-    'posts_per_page' => 3,
+    'posts_per_page' => -1,
     'tax_query' => array(
         array(
             'taxonomy'         => 'product_cat',
@@ -69,11 +69,6 @@ if ($products->have_posts()):
 endif;
 wp_reset_query();
 ?>
-                    </div>
-                    <div class="more-products">
-                        <a href="/product-category/<?php echo $category->slug; ?>/">
-                            <i class="las la-angle-right"></i>
-                        </a>
                     </div>
                 </div>
             </div>
