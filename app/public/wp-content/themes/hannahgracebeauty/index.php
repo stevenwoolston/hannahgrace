@@ -11,7 +11,6 @@ get_header();
             if (is_front_page()):
                 get_template_part('template-parts/content', 'page-header');
                 get_template_part('template-parts/content-home');
-                get_template_part('template-parts/content-home-hero');
             else:
                 get_template_part('template-parts/content', 'page-header');
                 get_template_part('template-parts/content', 'page');

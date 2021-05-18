@@ -19,7 +19,6 @@
 	);
 ?>
 <footer class="page-footer">
-    <img class="show-on-scroll md-floating-scissors" src="<?php echo get_template_directory_uri(); ?>/img/scissors.png" alt="">
 <?php   if (have_posts()):  ?>
     <div class="gutter footer-content">
 <?php       while(have_posts()): the_post();    ?>

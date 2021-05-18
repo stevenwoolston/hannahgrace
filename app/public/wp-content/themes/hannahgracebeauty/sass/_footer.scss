@@ -3,28 +3,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: cv(illuminating-emerald);
-    border-top: 5px dashed cv(illuminating-emerald, light);
     font-size: 0.9em;
-    position: relative;
-    margin-top: 75px;
-    
-    .md-floating-scissors {
-        width: 70px;
-        height: auto;
-        position: absolute;
-        top: -40px;
-        left: 20px;
-        transition: left 4s ease-in;
-
-        &.is-visible {
-            left: 90vw;
-
-            @include media-breakpoint-down(xs) { 
-                left: 75vw;
-            }
-        }
-    }
-
 
     * {
         color: #fff;

@@ -1,10 +1,4 @@
 header.page-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: $header-height;
-    z-index: 99;
 
     /*  icons   */
     .social-icon i {
@@ -28,65 +22,6 @@ header.page-header {
     @include media-breakpoint-down(md) {
         justify-content: flex-start;
         background-color: cv(illuminating-emerald);
-    }
-}
-
-$logo-width: 210px;
-.custom-logo {
-    padding: 2px 0 0 0 !important;
-    position: relative;
-
-    img, a {
-        width: $logo-width;
-
-        @include media-breakpoint-down(md) {
-            width: 150px;
-        }    
-
-    }
-
-    img {
-        height: auto;
-        margin-left: 20px;
-    }
-
-    a {
-        display: block;
-    }
-}
-
-.page-home .custom-logo img {
-    position: absolute;
-    top: 20vh;
-    width: $logo-width * 2;
-    height: auto;
-    transition: all 1s ease-in-out;
-    margin-left: calc(5vw - 10px);
-    z-index: 20;
-
-    @include media-breakpoint-down(lg) {
-        top: 15vh;
-        width: 250px;
-        margin-left: calc(5vw - 5px);
-    }
-
-    @include media-breakpoint-down(md) {
-        position: relative;
-        top: unset;
-        width: 160px;
-        height: unset;
-    }
-}
-
-.page-home .docked .custom-logo img {
-    top: -37px;
-    width: 210px;
-    margin-left: 20px;
-    height: auto;
-
-    @include media-breakpoint-down(md) {
-        top: unset;
-        width: 160px;
     }
 }
 
@@ -151,14 +86,11 @@ $logo-width: 210px;
     list-style: none;
     padding: 0 20px 0 0;
     align-items: center;
+    justify-content: center;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.98);
     transition: box-shadow 1s ease-in-out;
-    height: 80px;
-
-    &.docked {
-        box-shadow: -1px 1px 10px 0px #eee;
-    }
+    flex-wrap: wrap;
 
     > li {
         padding: 10px;
@@ -172,6 +104,20 @@ $logo-width: 210px;
 
             &:hover {
                 text-decoration: underline;
+            }
+        }
+
+        &.custom-logo {
+            width: 100%;
+
+            a {
+                display: block;
+                text-align: center;
+
+                img {
+                    width: 50vw;
+                    height: auto;
+                }
             }
         }
 
@@ -254,13 +200,12 @@ $logo-width: 210px;
 }
 
 .nav-menu-items {
-    flex-grow: 1;
 
     ul {
         display: flex;
         list-style: none;
         padding: 0;
-        justify-content: flex-end;
+        justify-content: center;
 
         li {
             padding: 10px;

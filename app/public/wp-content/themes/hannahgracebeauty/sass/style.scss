@@ -34,10 +34,29 @@
     box-sizing: border-box;
 }
 
+html, body {
+    min-height: 100vh;
+}
+
 body {
     font-family: $body-font;
     color: $base-font-color;
     font-size: $base-font-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > header {
+        flex: 0 0 auto;
+    }
+
+    main#main {
+        flex: 1 1 auto;
+    }
+
+    > footer {
+        flex: 0 0 auto;
+    }
 }
 
 hr {
@@ -47,19 +66,6 @@ hr {
 .md-btn {
     @extend .btn;
     @include md-btn();
-}
-
-main#main {
-    margin-top: $header-height;
-
-    > .wwd-content-page > .gutter {
-        margin-top: 25vh;
-    }
-
-    > .wwd-content-page.cart > .gutter, 
-    > .wwd-content-page.checkout > .gutter {
-        margin-top: 10vh;
-    }    
 }
 
 h1, h2, h3, h4, h5, h6 {
