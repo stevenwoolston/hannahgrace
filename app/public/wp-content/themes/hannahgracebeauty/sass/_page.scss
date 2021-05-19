@@ -30,7 +30,7 @@
     }
 
     .wp-block-media-text__content {
-        padding: 0 10vw;
+        padding: 0 4vw;
 
         @include media-breakpoint-down(md) {
             padding: 0 10px;
@@ -47,7 +47,6 @@
     
         p {
             margin-bottom: 1.5em;
-            color: cv(illuminating-emerald);
         }    
     }    
 
@@ -125,87 +124,6 @@
             }
         }
 
-    }
-}
-
-/*  instagram feed  */
-.instagram-feed {
-    display: flex;
-    flex-direction: column;
-    margin: 4vh auto 0 auto;
-    background: cv(illuminating-emerald);
-    background: linear-gradient(0deg, cv(illuminating-emerald) 35%, #fff 35%);
-
-    @include media-breakpoint-down(xs) {
-        padding-top: 5vh;
-    }
-
-    .sb_instagram_header.sbi_no_avatar {
-        display: none;
-    }
-
-    h3 {
-        color: cv(illuminating-emerald);
-        font-weight: 400;
-        margin-bottom: 0;
-    }
-
-    > p {
-        color: cv(illuminating-emerald);
-        font-weight: 400;
-        font-size: 0.8em;
-        margin: 10px auto 40px auto;
-    }
-
-    #sb_instagram {
-        margin: 0 auto 6vh auto !important;
-        width: 80% !important;
-
-        #sbi_images {
-            display: flex;
-            justify-content: center;
-            flex-wrap: nowrap;
-
-            @include media-breakpoint-down(xs) {
-                flex-direction: column;
-            }
-
-            .sbi_item {
-
-                &:nth-child(odd) {
-                    margin-top: 3vh !important;
-                    margin-bottom: -3vh !important;
-
-                    @include media-breakpoint-down(xs) {
-                        margin-top: 0 !important;
-                        margin-bottom: 3vh !important;
-                    }
-                }
-
-                @include media-breakpoint-down(xs) {
-                    margin-top: 0 !important;
-                    margin-bottom: 3vh !important;
-                }
-    
-                .sbi_photo_wrap {
-
-                    a {
-                        height: auto !important;
-                        display: block;
-
-                        img {
-                            width: 100%;
-                            height: auto;
-                            display: block !important;
-                        }
-                    }
-                }
-            }
-        }
-
-        #sbi_load {
-            display: none;
-        }
     }
 }
 

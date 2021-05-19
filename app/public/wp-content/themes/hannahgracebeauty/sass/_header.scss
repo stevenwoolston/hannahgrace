@@ -29,8 +29,8 @@ header.page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: cv(illuminating-emerald);
-    color: #fff;
+    background-color: cv(desert-sand);
+    color: cv(davys-grey);
     padding: 5px 10px 5px;
     font-size: 0.7em;
     text-transform: uppercase;
@@ -67,7 +67,7 @@ header.page-header {
             }
 
             .la-shopping-basket, .la-user {
-                color: #fff;
+                color: cv(davys-grey);
                 font-size: 2em;
             }
         }
