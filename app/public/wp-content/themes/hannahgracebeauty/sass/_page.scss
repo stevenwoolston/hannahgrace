@@ -689,12 +689,29 @@ body:not(.page-template-page-fullwidth) {
 
             .taxonomy-terms {
                 display: flex;
-                flex-wrap: wrap;
+                flex-direction: column;
                 justify-content: center;
 
                 > article {
-                    flex: 0 0 20%;
-                    margin: 0 1vw 20px 1vw;
+                    margin: 0 0 20px 0;
+
+                    .product-meta {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .product-name {
+                            flex-grow: 1;
+                        }
+
+                        .product-price {
+                            flex: 0 0 10%;
+                        }
+                    }
+
+                    .product-description {
+                        font-size: 0.9em;
+                        padding-top: 2vh;
+                    }
                 }
             }
         }
@@ -710,11 +727,11 @@ body:not(.page-template-page-fullwidth) {
     i {
         font-size: 2em;
         margin-right: 20px;
-        color: cv(illuminating-emerald, dark);
+        color: cv(desert-sand, darker);
     }
 
     a {
-        color: cv(illuminating-emerald, dark);
+        color: cv(desert-sand, darker);
     }
 }
 

@@ -30,10 +30,13 @@ array_push($category_class, 'product-type-' .$product->get_type());
 <article <?php post_class($category_class); ?>>
     <div class="product-meta">
         <div class="product-name">
-            <a href="<?php echo get_the_permalink(); ?>">
+            <h5><a href="<?php echo get_the_permalink(); ?>">
                 <?php echo $product->get_name(); ?>
-            </a>
+            </a></h5>
         </div>
-        <div class="product-price">$<?php echo $product_price; ?></div>
+        <h5><div class="product-price">$<?php echo $product_price; ?></div></h5>
+    </div>
+    <div class="product-description">
+        <?php   echo $product->short_description; ?>
     </div>
 </article>

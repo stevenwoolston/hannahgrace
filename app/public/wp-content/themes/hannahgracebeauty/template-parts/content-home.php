@@ -26,7 +26,7 @@
                     <?php echo $category->description; ?>
                 </div>
                 <div class="category-permalink">
-                    <a class="md-btn" href="<?php echo site_url() .'/product-category/'. $category->slug; ?>">Book</a>
+                    <a class="md-btn" href="<?php echo site_url() .'/product-category/'. $category->slug; ?>">View All</a>
                 </div>
             </div>
         </article>

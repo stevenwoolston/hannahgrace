@@ -17,7 +17,7 @@ $taxonomy = get_queried_object();
     if (have_posts()):
 ?>
     <section <?php echo post_class(); ?>>
-        <span class="archive-breadcrumb">
+        <span class="archive-breadcrumb d-none">
             <i class="las la-arrow-circle-left"></i>
             <a href="/shop">Back to Shop</a>
         </span>
@@ -32,7 +32,7 @@ $taxonomy = get_queried_object();
         endwhile;
 ?>
         </div>
-        <span class="archive-breadcrumb">
+        <span class="archive-breadcrumb d-none">
             <i class="las la-arrow-circle-left"></i>
             <a href="/shop">Back to Shop</a>
         </span>
