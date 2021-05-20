@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<section class="woocommerce-breadcrumb py-0 my-0">
+<section class="woocommerce-breadcrumb py-0 my-0 d-none">
     <span class="archive-breadcrumb py-0 my-0">
         <i class="las la-arrow-circle-left"></i>
         <a href="/shop">Continue Shopping</a>

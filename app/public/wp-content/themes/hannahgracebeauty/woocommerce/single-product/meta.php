@@ -19,6 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+return;
+
 global $product;
 ?>
 <div class="product_meta">
