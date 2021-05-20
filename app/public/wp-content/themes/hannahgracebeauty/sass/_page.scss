@@ -17,6 +17,56 @@
     }
 }
 
+.home-product-category {
+    width: 80%;
+    margin: 10vh auto 5vh auto;
+
+    .home-product-category-content {
+        display: flex;
+
+        .category-image, .category-meta {
+            flex: 0 0 50%;
+        }
+
+        .category-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 80%;
+                height: auto;
+            }
+        }
+
+        .category-meta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2, h3, h4, h5 {
+                padding-bottom: 2vh;
+            }
+
+            .category-description {
+                padding-bottom: 2vh;
+            }
+
+            .category-permalink {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &:nth-child(even) {
+        > .home-product-category-content .category-image {
+            order: 2;
+        }
+    }
+
+}
+
 .home-hero-container {
     width: 80%;
     margin: 5vh auto;
@@ -50,81 +100,6 @@
         }    
     }    
 
-}
-
-.whats-new-container {
-    background-color: cv(illuminating-emerald);
-    padding: 6vh 0 3vh 0;
-    margin: 6vh 0;
-
-    h2, h3, h4, h5, p {
-        color: #fff;
-
-        @include media-breakpoint-down(md) {
-            width: 80vw;
-            margin: 0 auto;
-        }    
-    }
-
-    h2, h3, h4, h5 {
-        font-family: $heading-font;
-        margin-bottom: 0;
-
-        @include media-breakpoint-down(sm) {
-            margin-bottom: 5px;
-        }    
-    }
-
-    p {
-        font-family: $body-font;
-        margin-bottom: 30px;
-
-        @include media-breakpoint-down(sm) {
-            font-size: 0.9em;
-        }    
-    }
-
-    .whats-new-articles {
-        display: flex;
-        justify-content: center;
-        width: 80vw;
-        margin: 0 auto;
-        flex-wrap: wrap;
-
-        @include media-breakpoint-down(md) {
-            width: 100vw;
-            padding: 0 10px;
-        }
-
-        @include media-breakpoint-down(sm) {
-            flex-direction: column;
-        }
-
-        > article {
-            text-align: center;
-            color: #fff;
-            font-family: $body-font;
-            margin: 0 15px 15px;
-            flex: 0 0 20%;
-            width: 20%;
-
-            @include media-breakpoint-down(lg) {
-                flex: 0 0 25%;
-                width: 25%;    
-            }
-
-            @include media-breakpoint-down(sm) {
-                margin: 0 auto 15px auto;
-                flex: 0 0 95%;
-                width: 95%;
-            }
-
-            a {
-                color: #fff;
-            }
-        }
-
-    }
 }
 
 section.wwd-content-page {

@@ -89,32 +89,32 @@ $variations: (
 @mixin md-btn {
     border-radius: 0 !important;
     padding: 8px 50px !important;
-    @include button-variant(#fff, cv(illuminating-emerald, dark), $hover-background: cv(illuminating-emerald, light));
-    color: cv(linen) !important;
-    border-color: cv(illuminating-emerald, dark) !important;
+    @include button-variant(#fff, cv(desert-sand, dark), $hover-background: cv(desert-sand, light));
+    color: cv(davys-grey) !important;
+    border-color: cv(desert-sand, dark) !important;
     text-transform: uppercase !important;
     text-decoration: none !important;
-    background-color: cv(illuminating-emerald) !important;
+    background-color: cv(desert-sand) !important;
     @extend .btn;
     border-width: 2px !important;
     font-size: 14px !important;
     font-weight: 500 !important;
 
     &:focus {
-        color: #fff !important;
-        background-color: cv(illuminating-emerald, light) !important;
-        border-color: cv(illuminating-emerald, light) !important;
+        color: cv(davys-grey) !important;
+        background-color: cv(desert-sand, light) !important;
+        border-color: cv(desert-sand, light) !important;
     }
 
     &:hover {
-        color: #fff !important;
-        background-color: cv(illuminating-emerald, light) !important;
-        border-color: cv(illuminating-emerald, light) !important;
+        color: cv(davys-grey) !important;
+        background-color: cv(desert-sand, light) !important;
+        border-color: cv(desert-sand, light) !important;
         text-decoration: none !important;
     }
 
     > a {
-        color: cv(linen) !important;
+        color: cv(davys-grey) !important;
         text-transform: uppercase !important;
         text-decoration: none !important;    
     }

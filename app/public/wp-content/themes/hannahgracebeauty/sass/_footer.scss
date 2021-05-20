@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: cv(illuminating-emerald);
+    background-color: cv(desert-sand);
     font-size: 0.9em;
 
     * {
-        color: #fff;
+        color: cv(davys-grey);
     }
 
     .footer-content {
@@ -54,7 +54,7 @@
                 
                 i {
                     font-size: 3em;
-                    color: cv(illuminating-emerald);
+                    color: cv(davys-grey);
                 }
             }
             
