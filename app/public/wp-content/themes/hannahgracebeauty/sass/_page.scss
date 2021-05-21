@@ -698,13 +698,24 @@ body:not(.page-template-page-fullwidth) {
                     .product-meta {
                         display: flex;
                         justify-content: space-between;
+                        align-items: center;
 
                         .product-name {
                             flex-grow: 1;
                         }
 
-                        .product-price {
-                            flex: 0 0 10%;
+                        h3, h4, h5 {
+                            margin: 0;
+
+                            .product-price {
+                                flex: 0 0 10%;
+                            }
+                        }
+
+                        .product-duration {
+                            font-size: 0.7em;
+                            padding-left: 20px;
+                            color: cv(desert-sand, darker);
                         }
                     }
 

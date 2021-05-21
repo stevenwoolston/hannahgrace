@@ -8,6 +8,10 @@ $variations: (
     function: lighten,
     parameters: 10%
   ),
+  lighter: (
+    function: lighten,
+    parameters: 25%
+  ),
   dark: (
     function: darken,
     parameters: 10%

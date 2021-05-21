@@ -69,3 +69,10 @@ function jk_woocommerce_available_variation($args) {
     return $args;
 }
 add_filter('woocommerce_available_variation', 'jk_woocommerce_available_variation'); // Variations
+
+// define the woocommerce_add_to_cart callback 
+function action_woocommerce_add_to_cart( $cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data ) { 
+    $data = 'cart_item_key = "' .$cart_item_key. '", productid = "' .$product_id. '", quantity = "' .$quantity. '", variation_id = "' .$variation_id. '", variation = "' .implode(",", $variation). '", cart_item_data = "' .implode(",", $cart_item_data). '"';
+    createBooking('New Booking for Product - ' .$product_id, $data, $product_id, $cart_item_key);
+}; 
+add_action( 'woocommerce_add_to_cart', 'action_woocommerce_add_to_cart', 10, 6 );

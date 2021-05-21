@@ -55,14 +55,15 @@ header.page-header {
             
             a {
                 padding: 0 5px 0 0;
-                color: #fff;
+                color: cv(davys-grey, darker);
 
                 &:focus, &:active, &:visited, &:hover {
-                    color: #fff;
+                    color: cv(davys-grey, darker);
                 }
 
                 &:hover {
                     text-decoration: none;
+                    color: cv(davys-grey);
                 }
             }
 

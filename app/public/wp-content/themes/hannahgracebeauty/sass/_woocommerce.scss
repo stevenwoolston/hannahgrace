@@ -1,6 +1,7 @@
 .woocommerce {
 
-    input[type=text], input[type=number], input[type=tel], input[type=email], textarea, select {
+    input[type=text], input[type=number], input[type=tel], input[type=email], input[type=password],
+        textarea, select {
         @extend .form-control;
         border-radius: 0;
     }
@@ -240,6 +241,7 @@ ul li.woocommerce-cart-icon {
     }
 
     .woocommerce-breadcrumb {
+        display: none;
         padding-top: 20px;
         color: cv(illuminating-emerald);
 
@@ -320,7 +322,7 @@ ul li.woocommerce-cart-icon {
                 align-items: center;
 
                 .product_title.entry-title {
-                    color: cv(illuminating-emerald);
+                    color: cv(desert-sand, darker);
                     margin: 0;
                     font-weight: 400;
                     flex-grow: 1;
@@ -419,11 +421,11 @@ ul li.woocommerce-cart-icon {
 // }
 
 .woocommerce-message, .woocommerce-info {
-    border-top-color: cv(illuminating-emerald);
+    border-top-color: cv(desert-sand);
     display: flex;
     align-items: center;
     justify-content: space-between;   
-    background-color: cv(illuminating-emerald, light);
+    background-color: cv(desert-sand, light);
 
     @include media-breakpoint-down(sm) {
         flex-direction: column;
@@ -433,7 +435,7 @@ ul li.woocommerce-cart-icon {
         top: 20px;
         left: 10px;
         font-size: 2em;
-        color: cv(illuminating-emerald);
+        color: cv(desert-sand);
     }
 
     a {
@@ -460,7 +462,7 @@ ul li.woocommerce-cart-icon {
         thead {
 
             tr {
-                background-color: cv(illuminating-emerald);
+                background-color: cv(desert-sand);
 
                 th {
                     color: #fff;
@@ -624,7 +626,7 @@ ul li.woocommerce-cart-icon {
 .woocommerce-checkout {
 
     #payment {
-        background-color: cv(illuminating-emerald, light);
+        background-color: cv(desert-sand, light);
 
         .wc_payment_methods.payment_methods {
     
@@ -635,10 +637,10 @@ ul li.woocommerce-cart-icon {
                 }
         
                 > div.payment_box {
-                    background-color: cv(illuminating-emerald);
+                    background-color: cv(desert-sand);
                     
                     &:before {
-                        border-bottom-color: cv(illuminating-emerald);
+                        border-bottom-color: cv(desert-sand);
                     }
 
                     fieldset {

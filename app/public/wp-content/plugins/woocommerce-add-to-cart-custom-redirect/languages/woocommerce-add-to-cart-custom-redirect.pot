@@ -1,0 +1,90 @@
+# Loco Gettext template
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Redirects for WooCommerce\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2017-12-19 19:15-0500\n"
+"PO-Revision-Date: 2017-12-19 19:16-0500\n"
+"Last-Translator: \n"
+"Language-Team: Ren Ventura <rv@renventura.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Revision-Date: Wed Jan 20 2016 10:32:24 GMT-0500 (EST)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-product-data-tabs.php:33
+msgid "Redirect"
+msgstr ""
+
+#: templates/product-data-tab-target.php:27
+msgid "Add-to-Cart Redirect URL"
+msgstr ""
+
+#: templates/product-data-tab-target.php:32
+msgid ""
+"This is where the user will be redirected to after this product is added to "
+"the cart. Enter a full URL."
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:19
+msgid "Upgrade to Custom Redirects for WooCommerce"
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:21
+msgid ""
+"With the premium version of Custom Redirects for WooCommerce, you get access "
+"to:"
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:25
+msgid "Product-specific Redirect URLs"
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:26
+msgid "Product Category/Tag Redirects"
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:27
+msgid "Redirect on AJAX Add-to-Cart"
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:28
+msgid "Convenient admin page to see all your redirects"
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:29
+msgid "Seamless upgrade from the Free version to Premium"
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:30
+msgid "One Year of Updates & Premium Support"
+msgstr ""
+
+#: templates/product-data-tab-upgrade-notice.php:35
+msgid "Okay, I need the features!"
+msgstr ""
+
+#: woocommerce-custom-redirect.php:140
+msgid ""
+"The Custom WooCommerce Redirects plugin requires you to install and activate "
+"WooCommerce first."
+msgstr ""
+
+#: woocommerce-custom-redirect.php:169
+msgid "Custom Redirects for WooCommerce Premium"
+msgstr ""
+
+#: woocommerce-custom-redirect.php:169
+msgid "Redirects PREMIUM"
+msgstr ""

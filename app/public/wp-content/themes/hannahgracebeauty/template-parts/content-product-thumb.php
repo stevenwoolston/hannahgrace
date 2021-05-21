@@ -34,7 +34,10 @@ array_push($category_class, 'product-type-' .$product->get_type());
                 <?php echo $product->get_name(); ?>
             </a></h5>
         </div>
-        <h5><div class="product-price">$<?php echo $product_price; ?></div></h5>
+        <h5>
+            <div class="product-price">$<?php echo $product_price; ?></div>
+        </h5>
+        <div class="product-duration">(approx <?php echo get_field('time_required', $product->get_id()); ?> minutes)</div>
     </div>
     <div class="product-description">
         <?php   echo $product->short_description; ?>

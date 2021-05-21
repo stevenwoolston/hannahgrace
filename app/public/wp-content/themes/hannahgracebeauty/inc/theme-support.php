@@ -97,7 +97,7 @@ function wwd_custom_post_types() {
     if (function_exists('wwd_add_custom_post')) {
         // wwd_add_custom_post('faq', 'FAQ', 'FAQs', 'dashicons-book-alt', array('post'));
         wwd_add_custom_post('layout', 'Layout Builder', 'Layout Builders', 'dashicons-book-alt', array('post'));
-        // wwd_add_custom_post('news', 'News', 'News', 'dashicons-book-alt', array('post'));
+        wwd_add_custom_post('booking', 'Booking', 'Bookings', 'dashicons-book-alt', array('post'));
         // wwd_add_custom_post('fabric', 'Our Fabric', 'Our Fabrics', 'dashicons-book-alt', array('post'));
         // wwd_add_custom_post(
         //     $name = 'maker', 
@@ -205,4 +205,22 @@ function handle_post_attachment($file_handler, $post_id, $set_thu=false) {
     }
 
     return $attach_id;  
+}
+
+function createBooking($title, $content, $product_id, $cart_item_key) {
+    global $user_ID; wp_get_current_user();
+
+    $new_booking = array(
+        'post_title'    => $title,
+        'post_content'  => $content,
+        // 'post_category' => array($_POST['cat']),  // Usable for custom taxonomies too
+        'post_status'   => 'publish',           // Choose: publish, preview, future, draft, etc.
+        'post_author' => $user_ID,
+        'post_type' => 'booking'  //'post',page' or use a custom post type if you want to
+    );
+
+    $booking = wp_insert_post($new_booking);
+    update_field('product_id', $product_id, $booking);
+    update_field('cart_item_key', $cart_item_key, $booking);
+    return $booking;
 }
