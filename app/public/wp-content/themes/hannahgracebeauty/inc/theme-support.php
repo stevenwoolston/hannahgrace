@@ -207,7 +207,8 @@ function handle_post_attachment($file_handler, $post_id, $set_thu=false) {
     return $attach_id;  
 }
 
-function createBooking($title, $content, $product_id, $cart_item_key) {
+function createBooking($title, $content, $product_id, $cart_item_key,
+    $booking_date, $booking_time) {
     global $user_ID; wp_get_current_user();
 
     $new_booking = array(
@@ -222,5 +223,7 @@ function createBooking($title, $content, $product_id, $cart_item_key) {
     $booking = wp_insert_post($new_booking);
     update_field('product_id', $product_id, $booking);
     update_field('cart_item_key', $cart_item_key, $booking);
+    update_field('booking_date', $booking_date, $booking);
+    update_field('booking_time', $booking_time, $booking);
     return $booking;
 }
