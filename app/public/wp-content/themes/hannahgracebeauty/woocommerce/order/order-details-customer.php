@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_address();
+$show_shipping = false; //! wc_ship_to_billing_address_only() && $order->needs_shipping_address();
 ?>
 <section class="woocommerce-customer-details d-none">
 
@@ -60,5 +60,25 @@ $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_a
 	<?php do_action( 'woocommerce_order_details_after_customer_details', $order ); ?>
 
 </section>
-
+<?php
+$order_data = $order->get_data();
+wp_reset_postdata();
+$bookings = new WP_Query(
+	array(
+		'post_status'   => 'publish',
+		'post_type' => 'booking',
+		'meta_key' => 'order_id',
+		'meta_value' => $order_data['id']
+	)
+);
+if ($bookings->have_posts()):
+	while($bookings->have_posts()): $bookings->the_post();
+		$post_id = get_the_id();
+		echo 'Booking title = ' .get_the_title(). '<br/.>';
+		echo 'Booking Date = ' .get_field('booking_date', $post_id). '<br/.>';
+		echo 'Booking Time = ' .get_field('booking_time', $post_id). '<br/.>';
+	endwhile;
+endif;
+wp_reset_postdata();
+?>
 <h1>Call Us Or Book In Using The Calendar Below</h1>

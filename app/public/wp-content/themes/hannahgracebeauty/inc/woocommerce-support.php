@@ -103,7 +103,6 @@ add_action('woocommerce_cart_updated', 'remove_from_cart');
 
 function so_payment_complete($order_id){
     $order = wc_get_order($order_id);
-    var_dump($order);
 
     // $user = $order->get_user();
     // if ($user){
@@ -124,9 +123,7 @@ function so_payment_complete($order_id){
         );
         if (count($booking) == 1) {
             update_field('order_id', $order_id, $booking[0]->ID);
-        } else {
-            var_dump($cart_item_key);
-            var_dump($booking);
+            delete_post_meta($item->get_id(), '_cart_item_key');
         }
     }
 }
@@ -196,6 +193,7 @@ add_action('woocommerce_payment_complete', 'so_payment_complete');
 // add_action('woocommerce_thankyou', 'wh_test_1', 10, 1);
 
 
+//  add the cart item key to the order item so it can be used to retrieve the booking
 function save_cart_item_key_as_custom_order_item_metadata( $item, $cart_item_key, $values, $order ) {
     // Save the cart item key as hidden order item meta data
     $item->update_meta_data( '_cart_item_key', $cart_item_key );
