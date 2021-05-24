@@ -24,5 +24,3 @@ global $product;
 ?>
 <h2 class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?> product_title entry-title"><?php echo $product->get_price_html(); ?></h2>
 </div><!--	/product-title-container -->
-<input type="text" name="bookingdate" value="2021-05-22">
-<input type="text" name="bookingtime" value="11:38">
