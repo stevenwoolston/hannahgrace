@@ -227,3 +227,25 @@ function createBooking($title, $content, $product_id, $cart_item_key,
     update_field('booking_time', $booking_time, $booking);
     return $booking;
 }
+
+function get_ajax_posts() {
+    // Query Arguments
+    $args = array(
+        'post_type' => array('booking'),
+        'post_status' => array('publish'),
+        'posts_per_page' => 40,
+        'nopaging' => true,
+        'order' => 'DESC',
+        'orderby' => 'date'
+    );
+
+    // The Query
+    $ajaxposts = get_posts( $args ); // changed to get_posts from wp_query, because `get_posts` returns an array
+
+    echo json_encode( $ajaxposts );
+
+    exit; // exit ajax call(or it will return useless information to the response)
+}
+// Fire AJAX action for both logged in and non-logged in users
+add_action('wp_ajax_get_ajax_posts', 'get_ajax_posts');
+add_action('wp_ajax_nopriv_get_ajax_posts', 'get_ajax_posts');

@@ -81,4 +81,3 @@ if ($bookings->have_posts()):
 endif;
 wp_reset_postdata();
 ?>
-<h1>Call Us Or Book In Using The Calendar Below</h1>

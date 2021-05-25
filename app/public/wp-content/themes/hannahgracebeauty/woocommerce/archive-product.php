@@ -9,6 +9,7 @@ get_header();
 ?>
 
 <main id="main" class="site-main" role="main">
+    <section class="page-wrap">
 <?php
 $hero = new WP_Query(array(
     'post_type' => 'layout',
@@ -29,83 +30,12 @@ if ($hero->have_posts()):
 endif;
 wp_reset_query();
 ?>
-<?php
-$categories = get_terms('product_cat', array(
-    'hide_empty' => true,
-    // 'exclude' => array(21, 116, 18, 177, 187)
-));
-foreach($categories as $category):
-    // var_dump($category);
-?>
-    <section class="product-category">
-        <article class="product-category-content">
-            <h4><?php echo $category->name; ?></h4>
-            <div class="category-meta">
-                <div class="category-products">
-                    <div class="category-product-list">
-<?php
-$products = new WP_Query(array(
-    'post_type' => 'product',
-    'post_status' => 'publish',
-    'posts_per_page' => -1,
-    'tax_query' => array(
-        array(
-            'taxonomy'         => 'product_cat',
-            'field'            => 'slug', // Or 'term_id' or 'name'
-            'terms'            => $category->slug, // A slug term
-            // 'include_children' => false // or true (optional)
-        )
-    ),
-    'orderby' => 'title',
-    'order' => 'ASC'
-));
-if ($products->have_posts()):
-    while($products->have_posts()): $products->the_post();
-        echo do_shortcode('[md-template template_name="content-product-thumb"]');
-    endwhile;
-endif;
-wp_reset_query();
-?>
-                    </div>
-                </div>
-            </div>
-        </article>
     </section>
+    <section class="page-template-page-fullwidth">
 <?php
-endforeach;
-wp_reset_query();
-$products = new WP_Query(array(
-    'post_type' => 'product',
-    'post_status' => 'publish',
-    'posts_per_page' => -1,
-    'tax_query' => array(
-        array(
-            'taxonomy'         => 'product_cat',
-            'field'            => 'slug', // Or 'term_id' or 'name'
-            'terms'            => 'quick-access', // A slug term
-            // 'include_children' => false // or true (optional)
-        )
-    ),
-    'orderby' => 'rand',
-    'order' => 'ASC'
-));
-if ($products->have_posts()):   ?>
-    <section class="product-category quick-access-roll">
-        <article>
-            <h4>Here are some more items we think you might be interested in</h4>
-            <div>
-<?php
-    while($products->have_posts()): $products->the_post();
-        echo do_shortcode('[md-template template_name="content-product-thumb"]');
-    endwhile;
+    get_template_part('template-parts/content-home');
 ?>
-            </div>
-        </article>
     </section>
-<?php
-endif;
-wp_reset_query();
-?>
 </main>
 <?php
 get_footer();

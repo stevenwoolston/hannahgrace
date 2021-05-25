@@ -17,9 +17,12 @@
     }
 }
 
-.home-product-category {
+.page-wrap, .home-product-category {
     width: 80%;
     margin: 10vh auto 5vh auto;
+}
+
+.home-product-category {
 
     .home-product-category-content {
         display: flex;
