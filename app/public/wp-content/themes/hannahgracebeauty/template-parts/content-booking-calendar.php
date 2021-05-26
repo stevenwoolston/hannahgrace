@@ -6,26 +6,9 @@
 
 <section class="booking-calendar-container">
 <h1>Booking Calendar</h1>
-
-<input type="text" id="booking-datepicker" data-date-format="yyyy-M-dd" name="bookingdate" readonly>
-<input type="text" name="bookingtime">
-
-
 <?php
 
 function build_calendar($month, $year) {
-
-	if (isset($_POST['back']) || isset($_POST['forward'])) {
-
-		if (isset($_POST['back'])) {
-
-		}
-	}
-	var_dump($_POST['monthname']);
-	var_dump($_POST['year']);
-	var_dump($_POST['back']);
-	var_dump($_POST['forward']);
-
 	$daysOfWeek = array('S','M','T','W','T','F','S');
 	$firstDayOfMonth = mktime(0,0,0,$month,1,$year);
 	$numberDays = date('t',$firstDayOfMonth);
@@ -34,9 +17,11 @@ function build_calendar($month, $year) {
 	$dayOfWeek = $dateComponents['wday'];
 	$calendar = "<table class='calendar table table-condensed table-bordered'>";
 	$calendar .= "<form method='GET'>";
-	$calendar .= "<input type='text' value='" .$monthName. "' name='monthname' />";
-	$calendar .= "<input type='text' value='" .$year. "' name='year' />";
-	$calendar .= "<caption><button type='submit' name='back' class='float-left'><<</button>$monthName $year<button type='submit' class='float-right' name='forward'>>></button></caption>";
+	$calendar .= "<caption>";
+	$calendar .= "<button type='submit' name='direction' value='-1' class='float-left'><<</button>";
+	$calendar .= $monthName. " " .$year;
+	$calendar .= "<button type='submit' name='direction' value='1' class='float-right'>>></button>";
+	$calendar .= "</caption>";
 	$calendar .= "<tr>";
 	foreach($daysOfWeek as $day) {
 		$calendar .= "<th class='header'>$day</th>";
@@ -57,7 +42,8 @@ function build_calendar($month, $year) {
 
 		// Is this today?
 		if(date('Y-m-d') == $date) {
-			$calendar .= "<td class='day success' rel='$date'><b>$currentDay</b></td>";
+			$calendar .= "<td class='day bg-success' rel='$date'>";
+			$calendar .= "<button type='submit' value='" .$date. "' name='selectedDate' />" .$currentDay. "</button></td>";
 		} else {
 			$calendar .= "<td class='day' rel='$date'>$currentDay</td>";
 		}
@@ -74,11 +60,44 @@ function build_calendar($month, $year) {
 	$calendar .= "</table>";
 	return $calendar;
 }
+
+if (isset($_POST['back']) || isset($_POST['forward'])) {
+
+	if (isset($_POST['back'])) {
+
+	}
+}
+$post_monthname = $_POST['monthname'];
+$post_year = $_POST['year'];
+$post_direction = $_POST['direction'];
+$post_selectedDate = $_POST['selectedDate'];
+
 $time = time();
-$numDay = date('d', $time);
 $numMonth = date('m', $time);
-$numYear = date('Y', $time);
+
+if (!isset($post_month)) {
+	$post_month = date("F", mktime(0, 0, 0, $numMonth, 10));
+}
+if (!isset($post_year)) {
+	$post_year = date('Y', $time);
+}
+
+$calendar_date = mktime(0, 0, 0, (int)$post_month, 1, (int)$post_year);
+var_dump($calendar_date);
+if (isset($post_direction)) {
+	$calendar_date = strtotime($post_direction. " months", $calendar_date);
+}
+var_dump($calendar_date);
+// $time = mktime(0,0,0,$month,1,$year);
+
+$time = time();
+$numDay = date('d', $calendar_date);
+$numMonth = date('m', $calendar_date);
+$nameMonth = date("F", mktime(0, 0, 0, $numMonth, 10));
+$numYear = date('Y', $calendar_date);
 $calendar = build_calendar($numMonth, $numYear);
 echo $calendar;
 ?>
+<input type='text' value='<?php echo $nameMonth; ?>' name='monthname' />
+<input type='text' value='<?php echo $numYear; ?>' name='year' />
 </section>
