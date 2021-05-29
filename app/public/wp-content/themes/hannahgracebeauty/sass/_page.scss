@@ -1275,3 +1275,74 @@ body.search-no-results {
         display: block;
     }
 }
+
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+
+    .calendar {
+
+        .calender-caption-container {
+            display: flex;
+            align-items: center;
+    
+            > div {
+                flex-grow: 1;
+    
+                button {
+                    background-color: cv(linen);
+                    border: 0;
+                    color: cv(davys-grey);
+                    border-radius: 45%;
+                    min-width: 40px;
+                }
+
+                &.calendar-caption {
+                    text-align: center;
+                    flex-grow: 2;
+                }
+            }
+        }
+    
+        table.booking-calendar {
+            border: 1px solid cv(desert-sand);
+            padding: 0;
+            margin: 0;
+    
+            td {
+                padding: 5px 10px !important;
+                vertical-align: middle;
+                text-align: center;
+                
+                button {
+                    background-color: cv(linen);
+                    border: 0;
+                    color: cv(davys-grey);
+                    border-radius: 50%;
+                    min-width: 40px;
+                }
+
+                &.selected button {
+                    background-color: cv(cornflower-blue);
+                    color: #fff;
+                }
+
+            }
+        }        
+    }
+
+    .calendar-times {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+        button {
+            flex: 0 0 100px;
+            margin: 10px 20px;
+            background-color: cv(linen);
+            border: 0;
+            color: cv(davys-grey);
+        }
+    }
+}
