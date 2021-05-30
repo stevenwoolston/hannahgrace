@@ -121,6 +121,10 @@ p {
     }
 }
 
+input[type=text], select, input[type=button], input[type=submit], button {
+    font-family: $body-font;
+}
+
 .call-to-action {
     
     a {

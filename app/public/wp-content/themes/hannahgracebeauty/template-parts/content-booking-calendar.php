@@ -5,7 +5,7 @@
 ?>
 
 <section class="booking-calendar-container">
-<h1>Booking Calendar</h1>
+<h4>Choose Your Preferred Booking Time</h>
 <?php
 $time = date("Y-m-d", time());
 // var_dump(date('Y-m-d', strtotime($_POST['selectedTime'])));
@@ -32,6 +32,7 @@ $dayOfWeek = $dateComponents['wday'];
 $prev_month = date('Y-m-d', strtotime($selectedDate . ' - 1 month'));
 $next_month = date('Y-m-d', strtotime($selectedDate . ' + 1 month'));
 
+$calendar = "<div class='SBW'>&nbsp;</div>";
 $calendar .= "<div class='calender-caption-container'>";
 $calendar .= "<div><button type='submit' name='selectedDate' value='" .$prev_month. "' class='float-left'><<</button></div>";
 $calendar .= "<div class='calendar-caption'>" .$monthName. " " .$year. "</div>";
@@ -58,14 +59,18 @@ while($currentDay <= $numberDays){
 	$date = "$year-$month-$currentDayRel";
 
 	// Is this today?
-	if (date('Y-m-d') == $date) {
-		$calendar .= "<td class='day bg-success' rel='$date'>";
-	} else if ($selectedDate == $date) {
-		$calendar .= "<td class='day selected' rel='$date'>";
+	$isBackDate = $date <= date('Y-m-d');
+	if ($selectedDate == $date) {
+		$calendar .= "<td class='day '" .((date('Y-m-d') == $date) ? "selected" : null). "' rel='$date'>";
 	} else {
 		$calendar .= "<td class='day' rel='$date'>";
 	}
-	$calendar .= "<button type='submit' value='" .$date. "' name='selectedDate' />" .$currentDay. "</button></td>";
+	if ($isBackDate) {
+		$calendar .= $currentDay;
+	} else {
+		$calendar .= "<button type='submit' value='" .$date. "' name='selectedDate' />" .$currentDay. "</button></td>";		
+	}
+	$calendar .= "</td>";
 
 	$currentDay++;
 	$dayOfWeek++;
@@ -75,15 +80,14 @@ if($dayOfWeek != 7){
 	$calendar .= "<td colspan='$remainingDays'>&nbsp;</td>";
 }
 $calendar .= "</tr>";
+$calendar .= "</form>";
 $calendar .= "</table>";
 // echo $calendar;
 
 ?>
 <div class="calendar-container">
-	<div class="calendar">
-		<form method="GET">
-	<?php echo $calendar; ?>
-		</form>
+	<div class="calendar 123">
+	<?php echo '<form method="GET">' .$calendar. '</form>';	?>
 	</div>
 	<div class="calendar-times">
 <?php

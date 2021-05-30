@@ -15,7 +15,8 @@
 <?php
     endif;
     $categories = get_terms('product_cat', array(
-        'hide_empty' => true
+        'hide_empty' => true,
+        'exclude' => array(16)
     ));
     foreach($categories as $category):
         $thumbnail_id = get_term_meta($category->term_id, 'thumbnail_id', true);

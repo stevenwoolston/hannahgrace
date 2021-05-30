@@ -1314,6 +1314,11 @@ body.search-no-results {
                 vertical-align: middle;
                 text-align: center;
                 
+                &.day {
+                    font-size: 0.6em;
+                    font-weight: 400;
+                }
+
                 button {
                     background-color: cv(linen);
                     border: 0;
@@ -1325,6 +1330,10 @@ body.search-no-results {
                 &.selected button {
                     background-color: cv(cornflower-blue);
                     color: #fff;
+                }
+
+                &.today button {
+                    background-color: cv(desert-sand, dark);
                 }
 
             }

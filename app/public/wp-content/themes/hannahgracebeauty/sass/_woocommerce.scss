@@ -1026,3 +1026,7 @@ section.my-account {
         display: none;            
     }
 }
+
+p.return-to-shop a {
+    @include md-btn();
+}

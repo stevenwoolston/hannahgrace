@@ -1,20 +1,13 @@
-$(function () {
-	$("#booking-datepicker").datepicker({
-        language: 'en-AU',
-    }).on('changeDate', getBookings);
+jQuery(function ($) {
 
-    // $.fn.datepicker.dates['en-AU'] = {
-    //     days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    //     daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-    //     daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-    //     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    //     monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    //     today: "Today",
-    //     clear: "Clear",
-    //     format: "yyyy-M-dd",
-    //     titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
-    //     weekStart: 0
-    // };
+    $(".single_add_to_cart_button.button.alt").on("click", function(e) {
+        var $bookingTime = $("input[name=booking-time]").val();
+        if ($bookingTime == '00:00') {
+            alert('You must select a booking first');
+            return false;
+        }
+        return true;
+    });
 
     function getBookings() {
         var selectedDate = $("#booking-datepicker").val();
