@@ -7,25 +7,9 @@
 @import "_mixins";
 @import "_layout";
 @import "_core";
-@import "_carousel";
 @import "_header";
-@import "_sidebar";
 @import "_page";
 @import "_footer";
-
-@font-face {
-    font-family: 'American Typewriter';
-    src: url('../css/fonts/American Typewriter Regular.otf') format("opentype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'American Typewriter';
-    src: url('../css/fonts/American Typewriter Bold.otf') format("opentype");
-    font-weight: 700;
-    font-style: normal;
-}
 
 * {
     margin: 0;

@@ -8,16 +8,13 @@ get_header();
 <?php
 	if (have_posts()):
         while(have_posts()): the_post();
-            if (is_front_page()):
-                get_template_part('template-parts/content', 'page-header');
-                get_template_part('template-parts/content-home');
-            else:
-                get_template_part('template-parts/content', 'page-header');
-                get_template_part('template-parts/content', 'page');
-            endif;
+            // if (is_front_page()):
+            //     get_template_part('template-parts/content-home');
+            // else:
+                get_template_part('template-parts/content', 'home');
+            // endif;
         endwhile;
     endif;
-    get_template_part('sidebar');
 ?>
     </section>
 </main>

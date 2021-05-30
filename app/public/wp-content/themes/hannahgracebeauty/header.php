@@ -16,7 +16,6 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="page-header">
-    <input type="checkbox" id="menu_is_active">
     <ul id="menu-primary">
     <li class="custom-logo">
 <?php 
@@ -24,8 +23,7 @@
     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 ?>
         <a href="/">
-            <img src="<?php echo $image[0]; ?>" 
-                class="animate__animated animate__fadeIn" alt="" />
+            <img src="<?php echo $image[0]; ?>" alt="" />
         </a>
     </li>
     <li class="nav-menu-items">
@@ -44,11 +42,8 @@
     echo do_shortcode('[yoast_social wrapinlist=true usefonticons=true]');
 ?>
     </li>
-    <li class="toggle">
-        <label for="menu_is_active" class="toggle-link">
-            <i class="las la-bars"></i>
-            <i class="las la-times"></i>
-        </label>
-    </li>    
+    <li class="timely-book">
+        <?php dynamic_sidebar('global-sidebar'); ?>    
+    </li>
     </ul>
 </header>
