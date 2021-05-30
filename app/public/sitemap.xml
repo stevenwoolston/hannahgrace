@@ -11,32 +11,7 @@
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://hannahgrace.local/shop/</loc>
-		<lastmod>2021-05-12</lastmod>
-		<changefreq>monthly</changefreq>
-	</url>
-	<url>
-		<loc>https://hannahgrace.local/cart/</loc>
-		<lastmod>2021-05-12</lastmod>
-		<changefreq>monthly</changefreq>
-	</url>
-	<url>
-		<loc>https://hannahgrace.local/checkout/</loc>
-		<lastmod>2021-05-12</lastmod>
-		<changefreq>monthly</changefreq>
-	</url>
-	<url>
-		<loc>https://hannahgrace.local/my-account/</loc>
-		<lastmod>2021-05-12</lastmod>
-		<changefreq>monthly</changefreq>
-	</url>
-	<url>
 		<loc>https://hannahgrace.local/hello-world/</loc>
-		<lastmod>2021-05-11</lastmod>
-		<changefreq>monthly</changefreq>
-	</url>
-	<url>
-		<loc>https://hannahgrace.local/sample-page/</loc>
 		<lastmod>2021-05-11</lastmod>
 		<changefreq>monthly</changefreq>
 	</url>

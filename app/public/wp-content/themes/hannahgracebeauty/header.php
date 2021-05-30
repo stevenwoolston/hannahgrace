@@ -16,32 +16,6 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="page-header">
-<?php
-    if (is_user_logged_in()):
-?>
-    <div class="top-notification-bar">
-        <div class="banner">
-            
-        </div>
-        <div class="cart <?php echo WC()->cart->get_cart_contents_count() ? 'has-cart-items' : ''; ?>">
-            <div class="my-account">
-                <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><i class="las la-user"></i></a>
-            </div>
-<?php
-        if (WC()->cart->get_cart_contents_count()):
-?>
-            <div class="basket">
-                <a href="<?php echo wc_get_cart_url(); ?>"><i class="las la-shopping-basket"></i></a>
-                <a class="md-cart-total" href="<?php echo wc_get_cart_url(); ?>">(<?php echo WC()->cart->get_cart_contents_count(); ?>)</a>
-            </div>
-<?php
-        endif;
-?>            
-        </div>
-    </div>
-<?php
-    endif;  // .cart
-?>
     <input type="checkbox" id="menu_is_active">
     <ul id="menu-primary">
     <li class="custom-logo">
@@ -64,10 +38,6 @@
     }
 ?>      
         </ul>
-    </li>
-    <li class="nav-basket">
-        <a href="<?php echo wc_get_cart_url(); ?>"><i class="las la-shopping-basket"></i></a>
-        <a class="md-cart-total" href="<?php echo wc_get_cart_url(); ?>">(<?php echo WC()->cart->get_cart_contents_count(); ?>)</a>
     </li>
     <li class="social-navs">
 <?php

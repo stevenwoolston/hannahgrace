@@ -17,6 +17,7 @@ get_header();
             endif;
         endwhile;
     endif;
+    get_template_part('sidebar');
 ?>
     </section>
 </main>
