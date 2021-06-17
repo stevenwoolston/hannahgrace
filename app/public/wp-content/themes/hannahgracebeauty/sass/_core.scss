@@ -1,0 +1,142 @@
+/*
+@package: wwd blankslate
+*/
+a {
+    color: $base-link-color;
+    
+    &:active, &:link, &:focus {
+        text-decoration: underline;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.bg-image-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/*
+    Gallery Format
+    Supported by 'custom-carousel' media size
+*/
+.wwd-format-gallery {
+
+    .carousel {
+        height: 600px;
+   }
+}
+
+.wwd-hero {
+
+    &.wwd-hero-25 {
+        min-height: 25vh;
+    }
+
+    &.wwd-hero-50 {
+        min-height: 50vh;
+    }
+
+    &.wwd-hero-80 {
+        min-height: 80vh;
+    }
+
+    &.wwd-hero-100 {
+        min-height: 100vh;
+    }    
+}
+
+/*  Images  */
+img {
+
+    &.alignright {
+        float: right;
+        margin: 1vh auto 1vh 2vw;
+    }
+    &.alignleft {
+        float: left;
+        margin: 1vh 2vw 1vh auto;
+    }
+    &.aligncenter {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+/*  end Images  */
+.gallery-thumbnail-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .thumbnail-item {
+        width: 40%;
+        margin: 10px 10px;
+        padding: 10px;
+
+        @include media-breakpoint-down(sm) { 
+            width: 100%;
+        }
+
+        &:hover {
+            padding: 7px;
+
+            img {
+                box-shadow: 1px 13px 10px #161414;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            display: block;
+
+            img {
+                box-shadow: none;
+            }
+        }
+
+        .text-overlay {
+            padding: 5px 10px;
+            font-family: $heading-font;
+            font-size: 1.2em;
+            text-align: center;
+        }
+    }
+}
+
+.attachment {
+
+    article {
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.gutter {
+    width: 80vw;
+    margin: 0 auto 0 auto;
+}
+
+button, input[type=button], input[type=submit] {
+    transition: 0.5 background ease-in-out;
+}
+
+/* Breakpoints */
+// @include media-breakpoint-down(lg) { body { background-color: orange !important; } }
+// @include media-breakpoint-down(md) { body { background-color: pink !important; } }
+// @include media-breakpoint-down(sm) { body { background-color: blue !important; } }
+// @include media-breakpoint-down(xs) { body { background-color: green !important; } }

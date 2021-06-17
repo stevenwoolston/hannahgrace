@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.wwd-plugin-options a {
+    outline: 0 !important;
+}
+
+.nav-tab {
+    float: left;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-left: .5em;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    background: #e5e5e5;
+    color: #555;
+}
+
+.nav-tab-small .nav-tab, h3 .nav-tab {
+    padding: 5px 14px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.nav-tab:focus,.nav-tab:hover {
+    background-color: #fff;
+    color: #444;
+}
+
+.nav-tab-active,.nav-tab:focus:active {
+    box-shadow: none;
+}
+
+.nav-tab-active {
+    margin-bottom: -1px;
+    color: #444;
+}
+
+.nav-tab-active,.nav-tab-active:focus,.nav-tab-active:focus:active,.nav-tab-active:hover {
+    border-bottom: 1px solid #f1f1f1;
+    background: #f1f1f1;
+    color: #000;
+}
+
+.wwd-nav-tab-wrapper,.wrap h2.wwd-nav-tab-wrapper,h1.wwd-nav-tab-wrapper {
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding-top: 9px;
+    padding-bottom: 0;
+    line-height: inherit;
+}
+
+.wwd-nav-tab-wrapper:not(.wp-clearfix):after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-pane {
+    display: none;
+    padding: 10px 20px;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.wwd-plugin-options table th, .wwd-plugin-options table td {
+    padding: 5px;
+}
+
+.wwd-plugin-options table th label {
+    display: block;
+    margin-top: 10px;
+}
+
+.wwd-plugin-options table input[type="text"] {
+    width: 300px;
+}
+
+.wwd-plugin-options table input[type="text"], .wwd-plugin-options table select {
+    padding: 5px;
+    font-size: 1.1em;
+    height: auto;
+    min-width: 100px;
+}
+
+table.wwd-admin {
+    background-color: #ddd;
+}
+
+table.wwd-admin th {
+    background-color: #aaa;
+}
+
+table.wwd-admin tbody tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+table.wwd-admin th, table.wwd-admin td {
+    padding: 5px 10px;
+}
+
+.wp-block {
+    max-width: unset;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+}

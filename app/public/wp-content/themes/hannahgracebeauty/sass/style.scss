@@ -1,0 +1,180 @@
+/*
+@package: wwd blankslate
+*/
+@import "_variables";
+@import "vendor/_bootstrap";
+@import "vendor/_animate";
+@import "_mixins";
+@import "_layout";
+@import "_core";
+@import "_header";
+@import "_page";
+@import "_footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: $body-font;
+    color: $base-font-color;
+    font-size: $base-font-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFDF9;
+    background-image: url(../img/background-flower.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 400px auto;
+    background-attachment: fixed;
+
+    > header {
+        flex: 0 0 auto;
+        background-color: #FFFDF9;
+    }
+
+    main#main {
+        flex: 1 1 auto;
+    }
+
+    > footer {
+        flex: 0 0 auto;
+    }
+}
+
+hr {
+    border-color: rgba(245, 245, 245, 0.4);
+}
+
+.md-btn {
+    @extend .btn;
+    @include md-btn();
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    font-weight: 700;
+    margin-top: 1.3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: cv(desert-sand, darker);
+
+    a {
+        color: cv(desert-sand, darker);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
+p {
+    line-height: 1.8em;
+    margin-bottom: 1em;
+
+    &:empty {
+        display: none;
+    }
+}
+
+input[type=text], select, input[type=button], input[type=submit], button {
+    font-family: $body-font;
+}
+
+.call-to-action {
+    
+    a {
+        @include md-btn();
+    }
+}
+
+#mc_embed_signup {
+    margin: 0 auto;
+    padding-top: 2em;
+
+    h2 {
+        margin-top: 0 !important;
+        font-family: "American Typewriter",sans-serif !important;
+        font-size: 24px !important;
+        font-weight: 400 !important;
+        margin: 0;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        width: 100%;
+    }
+
+    form.validate {
+        padding: 0 !important;
+
+        @include media-breakpoint-down(xs) {
+            padding: 40px 0 0 0 !important;
+        }
+    }
+
+    input[type=text], input[type=password], input[type=email], select {
+        color: cv(illuminating-emerald) !important;
+    }
+
+    input[type=submit]#mc-embedded-subscribe {
+        @extend .btn;
+        @include md-btn();
+        font-family: $body-font;
+        font-size: 1.1em !important;
+        line-height: 0.4em;
+        padding: 20px 50px 25px 50px !important;
+    }
+
+    .mc-field-group {
+        padding-bottom: 10px !important;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.page-footer #mc_embed_signup {
+    background-color: cv(illuminating-emerald) !important;
+    width: 80%;
+    padding-top: 0;
+    
+    input[type=submit]#mc-embedded-subscribe {
+        background-color: cv(illuminating-emerald) !important;
+        color: cv(illuminating-emerald) !important;
+    }
+
+    .mc-field-group {
+        padding-bottom: 3% !important;
+    }
+
+}

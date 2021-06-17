@@ -1,0 +1,21 @@
+/*
+@package: wwd blankslate
+*/
+$colors: (
+    cornflower-blue: #6f9cebff,
+    illuminating-emerald: #53917eff,
+    desert-sand: #dfc5b6ff,
+    davys-grey: #525051ff,
+    linen: #ece5ddff
+);
+
+$body-font: 'Varela Round', sans-serif;
+$heading-font: 'Varela Round', sans-serif;
+$base-font-size: 18px;
+$base-font-color: #525051ff;
+$header-height: 110px;
+$nav-font: $body-font;
+$hero-height: 60vh;
+$carousel-height: 60vh;
+$base-link-color: #525051ff;
+$base-link-alt-color: darken(#525051ff, 0.5);
